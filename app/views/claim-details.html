@@ -1,0 +1,444 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Claim details – {{ serviceName }}
+{% endblock %}
+
+{% block pageScripts %}
+
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "prototype"
+  },
+  html: 'This is a prototype service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+{{ govukBackLink({
+  href: "/",
+  text: "Back"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Claim details
+      </h1>
+
+      <h2 class="govuk-heading-l">Certification</h2>
+
+      {{ govukTable({
+        firstCellIsHeader: true,
+        rows: [
+          [
+            {
+              text: "Certified by"
+            },
+            {
+              text: "Rufus Titterington"
+            }
+          ],
+          [
+            {
+              text: "Date certified"
+            },
+            {
+              text: "30/03/2018 at 12:00 pm"
+            }
+          ],
+          [
+            {
+              text: "Reason"
+            },
+            {
+              text: "I attended the main hearing (1st day of trial)"
+            }
+          ]
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-l">Case details</h2>
+
+      {{ govukTable({
+        firstCellIsHeader: true,
+        rows: [
+          [
+            {
+              text: "Instructed advocate"
+            },
+            {
+              text: "Guthrie Featherstone (0020X)"
+            }
+          ],
+          [
+            {
+              text: "Reference number"
+            },
+            {
+              text: "GF/LT/75674990"
+            }
+          ],
+          [
+            {
+              text: "Case type"
+            },
+            {
+              text: "Retrial"
+            }
+          ],
+          [
+            {
+              text: "Court"
+            },
+            {
+              text: "Inner London"
+            }
+          ],
+          [
+            {
+              text: "Case number"
+            },
+            {
+              text: "T20180103"
+            }
+          ]
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-l">Trial details</h2>
+
+
+      <h2 class="govuk-heading-l">Retrial details</h2>
+
+      <h2 class="govuk-heading-l">Defendant details</h2>
+
+      <h3 class="govuk-heading-m">Defendant 1</h3>
+
+      {{ govukTable({
+        firstCellIsHeader: true,
+        rows: [
+          [
+            {
+              text: "First name"
+            },
+            {
+              text: "Louisa"
+            }
+          ],
+          [
+            {
+              text: "Last name"
+            },
+            {
+              text: "Toop"
+            }
+          ],
+          [
+            {
+              text: "Date of birth"
+            },
+            {
+              html: '<time datetime="1975-09-16">16/09/1975</time>'
+            }
+          ],
+          [
+            {
+              text: "Order for judicial apportionment"
+            },
+            {
+              text: "No"
+            }
+          ]
+        ]
+      }) }}
+
+      <h4 class="govuk-heading-s">Representation order 1</h4>
+  
+      {{ govukTable({
+        firstCellIsHeader: true,
+        rows: [
+          [
+            {
+              text: "Representation order date"
+            },
+            {
+              html: '<time datetime="2017-12-08">08/12/2017</time>'
+            }
+          ],
+          [
+            {
+              text: "MAAT reference"
+            },
+            {
+              text: "75674990"
+            }
+          ]
+        ]
+      }) }}
+
+
+      <h2 class="govuk-heading-l">Offence details</h2>
+  
+      {{ govukTable({
+        firstCellIsHeader: true,
+        rows: [
+          [
+            {
+              text: ""
+            },
+            {
+              text: ""
+            }
+          ],
+          [
+            {
+              text: ""
+            },
+            {
+              text: ""
+            }
+          ],
+          [
+            {
+              text: ""
+            },
+            {
+              text: ""
+            }
+          ]
+        ]
+      }) }}
+
+
+      <h2 class="govuk-heading-l">Fixed fees</h2>
+  
+      {{ govukTable({
+        firstCellIsHeader: true,
+        rows: [
+          [
+            {
+              text: ""
+            },
+            {
+              text: ""
+            }
+          ],
+          [
+            {
+              text: ""
+            },
+            {
+              text: ""
+            }
+          ],
+          [
+            {
+              text: ""
+            },
+            {
+              text: ""
+            }
+          ]
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-l">Graduated fees</h2>
+  
+      {{ govukTable({
+        firstCellIsHeader: true,
+        rows: [
+          [
+            {
+              text: ""
+            },
+            {
+              text: ""
+            }
+          ],
+          [
+            {
+              text: ""
+            },
+            {
+              text: ""
+            }
+          ],
+          [
+            {
+              text: ""
+            },
+            {
+              text: ""
+            }
+          ]
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-l">Miscellaneous fees</h2>
+  
+      {{ govukTable({
+        firstCellIsHeader: true,
+        rows: [
+          [
+            {
+              text: ""
+            },
+            {
+              text: ""
+            }
+          ],
+          [
+            {
+              text: ""
+            },
+            {
+              text: ""
+            }
+          ],
+          [
+            {
+              text: ""
+            },
+            {
+              text: ""
+            }
+          ]
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-l">Disbursements</h2>
+  
+      {{ govukTable({
+        firstCellIsHeader: true,
+        rows: [
+          [
+            {
+              text: ""
+            },
+            {
+              text: ""
+            }
+          ],
+          [
+            {
+              text: ""
+            },
+            {
+              text: ""
+            }
+          ],
+          [
+            {
+              text: ""
+            },
+            {
+              text: ""
+            }
+          ]
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-l">Travel expenses</h2>
+  
+      {{ govukTable({
+        firstCellIsHeader: true,
+        rows: [
+          [
+            {
+              text: ""
+            },
+            {
+              text: ""
+            }
+          ],
+          [
+            {
+              text: ""
+            },
+            {
+              text: ""
+            }
+          ],
+          [
+            {
+              text: ""
+            },
+            {
+              text: ""
+            }
+          ]
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-l">Supporting evidence</h2>
+  
+      {{ govukTable({
+        firstCellIsHeader: true,
+        rows: [
+          [
+            {
+              text: ""
+            },
+            {
+              text: ""
+            }
+          ],
+          [
+            {
+              text: ""
+            },
+            {
+              text: ""
+            }
+          ],
+          [
+            {
+              text: ""
+            },
+            {
+              text: ""
+            }
+          ]
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-l">Additional information</h2>
+  
+      {{ govukTable({
+        firstCellIsHeader: true,
+        rows: [
+          [
+            {
+              text: ""
+            },
+            {
+              text: ""
+            }
+          ],
+          [
+            {
+              text: ""
+            },
+            {
+              text: ""
+            }
+          ],
+          [
+            {
+              text: ""
+            },
+            {
+              text: ""
+            }
+          ]
+        ]
+      }) }}
+    </div>
+</div>
+
+{% endblock %}
