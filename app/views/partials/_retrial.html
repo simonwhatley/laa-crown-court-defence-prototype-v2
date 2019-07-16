@@ -1,5 +1,9 @@
 <h2 class="govuk-heading-m">
   Retrial details
+  <a href="#" class="link-change">
+    Change
+    <span class="govuk-visually-hidden">&nbsp;retrial details</span>
+  </a>
 </h2>
 
 {{ govukSummaryList({
@@ -10,15 +14,6 @@
       },
       value: {
         text: "1 April 2019"
-      },
-      actions: {
-        items: [
-          {
-            href: "#",
-            text: "Change",
-            visuallyHiddenText: "first day of trial"
-          }
-        ]
       }
     },
     {
@@ -27,15 +22,6 @@
       },
       value: {
         text: "12 April 2018"
-      },
-      actions: {
-        items: [
-          {
-            href: "#",
-            text: "Change",
-            visuallyHiddenText: "date the retrial concluded"
-          }
-        ]
       }
     },
     {
@@ -44,15 +30,6 @@
       },
       value: {
         html: "10"
-      },
-      actions: {
-        items: [
-          {
-            href: "#",
-            text: "Change",
-            visuallyHiddenText: "the estimated retrial length"
-          }
-        ]
       }
     },
     {
@@ -61,15 +38,6 @@
       },
       value: {
         html: "10"
-      },
-      actions: {
-        items: [
-          {
-            href: "#",
-            text: "Change",
-            visuallyHiddenText: "the actual trial length"
-          }
-        ]
       }
     },
     {
@@ -78,15 +46,6 @@
       },
       value: {
         html: "No"
-      },
-      actions: {
-        items: [
-          {
-            href: "#",
-            text: "Change",
-            visuallyHiddenText: "the reduced rate to retrial"
-          }
-        ]
       }
     }
   ]

@@ -1,5 +1,9 @@
 <h2 class="govuk-heading-l">
   Transfer details
+  <a href="#" class="link-change">
+    Change
+    <span class="govuk-visually-hidden">&nbsp;transfer details</span>
+  </a>
 </h2>
 
 {{ govukSummaryList({
@@ -10,15 +14,6 @@
       },
       value: {
         text: "Original litigator"
-      },
-      actions: {
-        items: [
-          {
-            href: "#",
-            text: "Change",
-            visuallyHiddenText: "litigator type"
-          }
-        ]
       }
     },
     {
@@ -27,15 +22,6 @@
       },
       value: {
         text: "Up to an including PTPH transfer"
-      },
-      actions: {
-        items: [
-          {
-            href: "#",
-            text: "Change",
-            visuallyHiddenText: "when you stopped acting"
-          }
-        ]
       }
     },
     {
@@ -44,15 +30,6 @@
       },
       value: {
         html: "1 January 2019"
-      },
-      actions: {
-        items: [
-          {
-            href: "#",
-            text: "Change",
-            visuallyHiddenText: "the date when you stopped acting"
-          }
-        ]
       }
     },
     {
@@ -61,15 +38,6 @@
       },
       value: {
         html: "No"
-      },
-      actions: {
-        items: [
-          {
-            href: "#",
-            text: "Change",
-            visuallyHiddenText: "whether the case was elected"
-          }
-        ]
       }
     }
   ]

@@ -27,7 +27,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full govuk-!-margin-bottom-8">
       <h1 class="govuk-heading-xl">
-        Claim summary
+        Claim for {{ data.provider_type }} {{ data.bill_type }} fees
       </h1>
   
       {% include "./partials/_cost-summary.html" %}
@@ -57,39 +57,64 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
 
-      {% include "./partials/_transfer-details.html" %}
+      {%- if data.bill_type == "transfer" %}
+        {% include "./partials/_transfer-details.html" %}
+      {% endif -%}
 
       {% include "./partials/_case-details.html" %}
 
-      {% include "./partials/_trial.html" %}
+      {%- if data.case_type in ["trial","retrial"] %}
+        {% include "./partials/_trial.html" %}
+      {% endif -%}
 
-      {% include "./partials/_retrial.html" %}
+      {%- if data.case_type == "retrial" %}
+        {% include "./partials/_retrial.html" %}
+      {% endif -%}
 
-      {% include "./partials/_cracked-trial.html" %}
+      {%- if data.case_type == "cracked-trial" %}
+        {% include "./partials/_cracked-trial.html" %}
+      {% endif -%}
 
-      {% include "./partials/_cracked-before-retrial.html" %}
+      {%- if data.case_type == "cracked-before-retrial" %}
+        {% include "./partials/_cracked-before-retrial.html" %}
+      {% endif -%}
 
       {% include "./partials/_defendant-details.html" %}
 
-      {% include "./partials/_offence-details.html" %}
+      {%- if data.fee_type == "graduated" %}
+        {% include "./partials/_offence-details.html" %}
+      {% endif -%}
 
-      {% include "./partials/_fixed-fees.html" %}
+      {%- if data.bill_type == "final" and data.fee_type == "fixed" %}
+        {% include "./partials/_fixed-fees.html" %}
+      {% endif -%}
 
-      {% include "./partials/_graduated-fees.html" %}
+      {%- if data.bill_type == "final" and data.fee_type == "graduated" %}
+        {% include "./partials/_graduated-fees.html" %}
+      {% endif -%}
 
-      {% include "./partials/_interim-fees.html" %}
+      {%- if data.bill_type == "interim" %}
+        {% include "./partials/_interim-fees.html" %}
+      {% endif -%}
 
-      {% include "./partials/_transfer-fees.html" %}
+      {%- if data.bill_type == "warrant" %}
+        {% include "./partials/_warrant-fees.html" %}
+      {% endif -%}
+
+      {%- if data.bill_type == "transfer" %}
+        {% include "./partials/_transfer-fees.html" %}
+      {% endif -%}
 
       {% include "./partials/_miscellaneous-fees.html" %}
 
-      {% include "./partials/_disbursements.html" %}
+      {%- if data.fee_scheme == "lgfs" %}
+        {% include "./partials/_disbursements.html" %}
+      {% endif -%}
 
       {% include "./partials/_travel-expenses.html" %}
 
       {% include "./partials/_supporting-evidence.html" %}
 
-      
     </div>
 </div>
 

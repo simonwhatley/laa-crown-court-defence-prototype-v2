@@ -1,6 +1,12 @@
 <h2 class="govuk-heading-l">
   Case details
+  <a href="#" class="link-change">
+    Change
+    <span class="govuk-visually-hidden">&nbsp;case details</span>
+  </a>
 </h2>
+
+{%- if data.provider_type == "advocate" %}
 
 {{ govukSummaryList({
   rows: [
@@ -10,15 +16,6 @@
       },
       value: {
         text: "Guthrie Featherstone (0020X)"
-      },
-      actions: {
-        items: [
-          {
-            href: "#",
-            text: "Change",
-            visuallyHiddenText: "name"
-          }
-        ]
       }
     },
     {
@@ -27,15 +24,6 @@
       },
       value: {
         text: "GF/LT/75674990"
-      },
-      actions: {
-        items: [
-          {
-            href: "#",
-            text: "Change",
-            visuallyHiddenText: "reference number"
-          }
-        ]
       }
     },
     {
@@ -44,15 +32,6 @@
       },
       value: {
         html: "Retrial"
-      },
-      actions: {
-        items: [
-          {
-            href: "#",
-            text: "Change",
-            visuallyHiddenText: "case type"
-          }
-        ]
       }
     },
     {
@@ -61,15 +40,6 @@
       },
       value: {
         text: "Wolverhampton Crown court"
-      },
-      actions: {
-        items: [
-          {
-            href: "#",
-            text: "Change",
-            visuallyHiddenText: "court"
-          }
-        ]
       }
     },
     {
@@ -78,16 +48,13 @@
       },
       value: {
         text: 'T20190103'
-      },
-      actions: {
-        items: [
-          {
-            href: "#",
-            text: "Change",
-            visuallyHiddenText: "case number"
-          }
-        ]
       }
     }
   ]
 }) }}
+
+{% endif -%}
+
+{%- if data.provider_type == "litigator" %}
+
+{% endif -%}

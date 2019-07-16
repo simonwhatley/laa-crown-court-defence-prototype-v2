@@ -1,5 +1,9 @@
 <h2 class="govuk-heading-m">
   Trial details
+  <a href="#" class="link-change">
+    Change
+    <span class="govuk-visually-hidden">&nbsp;trial details</span>
+  </a>
 </h2>
 
 {{ govukSummaryList({
@@ -10,15 +14,6 @@
       },
       value: {
         text: "1 March 2019"
-      },
-      actions: {
-        items: [
-          {
-            href: "#",
-            text: "Change",
-            visuallyHiddenText: "first day of trial"
-          }
-        ]
       }
     },
     {
@@ -27,15 +22,6 @@
       },
       value: {
         text: "14 March 2019"
-      },
-      actions: {
-        items: [
-          {
-            href: "#",
-            text: "Change",
-            visuallyHiddenText: "date the trial concluded"
-          }
-        ]
       }
     },
     {
@@ -44,15 +30,6 @@
       },
       value: {
         html: "10"
-      },
-      actions: {
-        items: [
-          {
-            href: "#",
-            text: "Change",
-            visuallyHiddenText: "the estimated trial length"
-          }
-        ]
       }
     },
     {
@@ -61,15 +38,6 @@
       },
       value: {
         html: "10"
-      },
-      actions: {
-        items: [
-          {
-            href: "#",
-            text: "Change",
-            visuallyHiddenText: "the actual trial length"
-          }
-        ]
       }
     }
   ]

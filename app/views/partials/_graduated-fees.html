@@ -1,3 +1,48 @@
 <h2 class="govuk-heading-l">
   Graduated fees
+  <a href="#" class="link-change">
+    Change
+    <span class="govuk-visually-hidden">&nbsp;graduated fees</span>
+  </a>
 </h2>
+
+{%- if data.provider_type == "litigator" %}
+
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "First day of hearing"
+      },
+      value: {
+        text: "1 March 2019"
+      }
+    },
+    {
+      key: {
+        text: "Actual trial length"
+      },
+      value: {
+        text: "5 days"
+      }
+    },
+    {
+      key: {
+        text: "Total pages of evidence"
+      },
+      value: {
+        text: "1,000 pages"
+      }
+    },
+    {
+      key: {
+        text: "Net amount"
+      },
+      value: {
+        text: "£0.00"
+      }
+    }
+  ]
+}) }}
+
+{% endif -%}

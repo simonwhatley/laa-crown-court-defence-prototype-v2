@@ -1,10 +1,14 @@
 <h2 class="govuk-heading-l">
   Defendant details
+  <a href="#" class="link-change">
+    Change
+    <span class="govuk-visually-hidden">&nbsp;defendant details</span>
+  </a>
 </h2>
 
-<h3 class="govuk-heading-m">
+<!-- <h3 class="govuk-heading-m">
   Defendant 1
-</h3>
+</h3> -->
 
 {{ govukSummaryList({
   rows: [
@@ -14,15 +18,6 @@
       },
       value: {
         text: "Louisa"
-      },
-      actions: {
-        items: [
-          {
-            href: "#",
-            text: "Change",
-            visuallyHiddenText: "first name"
-          }
-        ]
       }
     },
     {
@@ -31,15 +26,6 @@
       },
       value: {
         text: "Toupe"
-      },
-      actions: {
-        items: [
-          {
-            href: "#",
-            text: "Change",
-            visuallyHiddenText: "last name"
-          }
-        ]
       }
     },
     {
@@ -48,15 +34,6 @@
       },
       value: {
         html: "16/09/1975"
-      },
-      actions: {
-        items: [
-          {
-            href: "#",
-            text: "Change",
-            visuallyHiddenText: "case type"
-          }
-        ]
       }
     },
     {
@@ -65,41 +42,14 @@
       },
       value: {
         text: "No"
-      },
-      actions: {
-        items: [
-          {
-            href: "#",
-            text: "Change",
-            visuallyHiddenText: "order for judicial apportionment"
-          }
-        ]
       }
-    }
-  ]
-}) }}
-
-<h4 class="govuk-heading-s">
-  Representation order 1
-</h4>
-
-{{ govukSummaryList({
-  rows: [
+    },
     {
       key: {
         text: "Representation order date"
       },
       value: {
         text: "08/12/2018"
-      },
-      actions: {
-        items: [
-          {
-            href: "#",
-            text: "Change",
-            visuallyHiddenText: "representation order date"
-          }
-        ]
       }
     },
     {
@@ -108,58 +58,6 @@
       },
       value: {
         text: "75674990"
-      },
-      actions: {
-        items: [
-          {
-            href: "#",
-            text: "Change",
-            visuallyHiddenText: "MAAT reference number"
-          }
-        ]
-      }
-    }
-  ]
-}) }}
-
-<h4 class="govuk-heading-s">
-  Representation order 2
-</h4>
-
-{{ govukSummaryList({
-  rows: [
-    {
-      key: {
-        text: "Representation order date"
-      },
-      value: {
-        text: "10/04/2019"
-      },
-      actions: {
-        items: [
-          {
-            href: "#",
-            text: "Change",
-            visuallyHiddenText: "representation order date"
-          }
-        ]
-      }
-    },
-    {
-      key: {
-        text: "MAAT reference number"
-      },
-      value: {
-        text: "75674991"
-      },
-      actions: {
-        items: [
-          {
-            href: "#",
-            text: "Change",
-            visuallyHiddenText: "MAAT reference number"
-          }
-        ]
       }
     }
   ]

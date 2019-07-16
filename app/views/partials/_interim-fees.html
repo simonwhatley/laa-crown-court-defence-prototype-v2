@@ -1,3 +1,52 @@
 <h2 class="govuk-heading-l">
   Interim fees
+  <a href="#" class="link-change">
+    Change
+    <span class="govuk-visually-hidden">&nbsp;interim fees</span>
+  </a>
 </h2>
+
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "Type of fee"
+      },
+      value: {
+        text: "Trial start"
+      }
+    },
+    {
+      key: {
+        text: "Total pages of evidence"
+      },
+      value: {
+        text: "1,000 pages"
+      }
+    },
+    {
+      key: {
+        text: "Date trial started"
+      },
+      value: {
+        html: "1 March 2019"
+      }
+    },
+    {
+      key: {
+        text: "Estimated length of trial"
+      },
+      value: {
+        text: "5 days"
+      }
+    },
+    {
+      key: {
+        text: "Net amount"
+      },
+      value: {
+        text: "£0.00"
+      }
+    }
+  ]
+}) }}

@@ -13,3 +13,20 @@ $govuk-global-styles: true;
 @import "components/cookie-banner";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+
+
+a.link-change {
+  float: right;
+  font-size: 19px;
+  /*font-weight: normal !important;*/
+  line-height: 1.31579;
+  margin: 0px;
+  &:hover {
+    color: #2b8cc4;
+  }
+  @media (max-width: 640px) {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}

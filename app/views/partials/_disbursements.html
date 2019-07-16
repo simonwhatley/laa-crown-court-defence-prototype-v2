@@ -1,3 +1,80 @@
 <h2 class="govuk-heading-l">
   Disbursements
+  <a href="#" class="link-change">
+    Change
+    <span class="govuk-visually-hidden">&nbsp;disbursements</span>
+  </a>
 </h2>
+
+{{ govukTable({
+  head: [
+    {
+      text: "Type of disbursement"
+    },
+    {
+      text: "Net amount",
+      format: "numeric"
+    },
+    {
+      text: "VAT amount",
+      format: "numeric"
+    },
+    {
+      text: "Total amount",
+      format: "numeric"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Computer experts"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Financial experts"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Handwriting experts"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      }
+    ]
+  ]
+}) }}

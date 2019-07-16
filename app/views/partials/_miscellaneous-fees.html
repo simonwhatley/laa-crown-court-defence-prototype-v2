@@ -1,3 +1,79 @@
 <h2 class="govuk-heading-l">
   Miscellaneous fees
+  <a href="#" class="link-change">
+    Change
+    <span class="govuk-visually-hidden">&nbsp;miscellaneous fees</span>
+  </a>
 </h2>
+
+{% set feeDatesHtml %}
+<ul class="govuk-list">
+  <li>1 March 2019</li>
+  <li>2 March 2019</li>
+  <li>3 March 2019</li>
+</ul>
+{% endset %}
+
+{{ govukTable({
+  head: [
+    {
+      text: "Type of fee",
+      attributes: {
+        style: "width:150px"
+      }
+    },
+    {
+      text: "Dates"
+    },
+    {
+      text: "Quantity",
+      format: "numeric"
+    },
+    {
+      text: "Rate",
+      format: "numeric"
+    },
+    {
+      text: "Net amount",
+      format: "numeric"
+    },
+    {
+      text: "VAT amount",
+      format: "numeric"
+    },
+    {
+      text: "Total amount",
+      format: "numeric"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Abuse of process hearings (half day)"
+      },
+      {
+        html: feeDatesHtml
+      },
+      {
+        text: "3",
+        format: "numeric"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      }
+    ]
+  ]
+}) }}
