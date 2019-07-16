@@ -2,6 +2,9 @@
   Cost summary
 </h2>
 
+
+{%- if data.provider_type == "advocate" %}
+
 {{ govukTable({
   firstCellIsHeader: false,
   head: [
@@ -24,7 +27,7 @@
   rows: [
     [
       {
-        text: "Graduated fees"
+        text: data.fee_type | title + " fees"
       },
       {
         text: "£0.00",
@@ -96,3 +99,121 @@
     ]
   ]
 }) }}
+
+{% endif -%}
+
+{%- if data.provider_type == "litigator" %}
+
+{{ govukTable({
+  firstCellIsHeader: false,
+  head: [
+    {
+      text: "Description"
+    },
+    {
+      text: "Net amount",
+      format: "numeric"
+    },
+    {
+      text: "VAT amount",
+      format: "numeric"
+    },
+    {
+      text: "Total amount",
+      format: "numeric"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: data.fee_type | title + " fees"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Miscellaneous fees"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Disbursements"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Travel expenses"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Claim total",
+        classes: "govuk-!-font-weight-bold"
+      },
+      {
+        text: "£0.00",
+        format: "numeric",
+        classes: "govuk-!-font-weight-bold"
+      },
+      {
+        text: "£0.00",
+        format: "numeric",
+        classes: "govuk-!-font-weight-bold"
+      },
+      {
+        text: "£0.00",
+        format: "numeric",
+        classes: "govuk-!-font-weight-bold"
+      }
+    ]
+  ]
+}) }}
+
+{% endif -%}

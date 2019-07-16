@@ -1,4 +1,4 @@
-<h2 class="govuk-heading-l">
+<h2 class="govuk-heading-l govuk-!-margin-top-8">
   Fixed fees
   <a href="#" class="link-change">
     Change
@@ -8,6 +8,159 @@
 
 {%- if data.provider_type == "advocate" %}
 
+{% set dailyAttendanceFeeDatesHtml %}
+<ul class="govuk-list">
+  <li>1 March 2019</li>
+  <li>3 March 2019</li>
+  <li>5 March 2019</li>
+</ul>
+{% endset %}
+
+{% set standardAppearanceFeeDatesHtml %}
+<ul class="govuk-list">
+  <li>2 March 2019</li>
+  <li>4 March 2019</li>
+  <li>6 March 2019</li>
+</ul>
+{% endset %}
+
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "Advocate category"
+      },
+      value: {
+        text: "Junior"
+      }
+    }
+  ]
+}) }}
+
+{{ govukTable({
+  head: [
+    {
+      text: "Type of fee",
+      attributes: {
+        style: "width:20%;"
+      }
+    },
+    {
+      text: "Details"
+    },
+    {
+      text: "Quantity",
+      format: "numeric"
+    },
+    {
+      text: "Rate",
+      format: "numeric"
+    },
+    {
+      text: "Net amount",
+      format: "numeric"
+    },
+    {
+      text: "VAT amount",
+      format: "numeric"
+    },
+    {
+      text: "Total amount",
+      format: "numeric"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Appeals to the crown court against conviction"
+      },
+      {
+        html: dailyAttendanceFeeDatesHtml
+      },
+      {
+        text: "3 days",
+        format: "numeric"
+      },
+      {
+        text: "£330.00",
+        format: "numeric"
+      },
+      {
+        text: "£990.00",
+        format: "numeric"
+      },
+      {
+        text: "£198.00",
+        format: "numeric"
+      },
+      {
+        text: "£1,188.00",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Standard appearance fees"
+      },
+      {
+        html: standardAppearanceFeeDatesHtml
+      },
+      {
+        text: "3 days",
+        format: "numeric"
+      },
+      {
+        text: "£91.00",
+        format: "numeric"
+      },
+      {
+        text: "£273.00",
+        format: "numeric"
+      },
+      {
+        text: "£54.60",
+        format: "numeric"
+      },
+      {
+        text: "£327.60",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Total",
+        classes: "govuk-!-font-weight-bold"
+      },
+      {
+        text: " "
+      },
+      {
+        text: " ",
+        format: "numeric"
+      },
+      {
+        text: " ",
+        format: "numeric"
+      },
+      {
+        text: "£1,263.00",
+        format: "numeric",
+        classes: "govuk-!-font-weight-bold"
+      },
+      {
+        text: "£252.60",
+        format: "numeric",
+        classes: "govuk-!-font-weight-bold"
+      },
+      {
+        text: "£1,515.60",
+        format: "numeric",
+        classes: "govuk-!-font-weight-bold"
+      }
+    ]
+  ]
+}) }}
+
 {% endif -%}
 
 {%- if data.provider_type == "litigator" %}
@@ -16,34 +169,34 @@
   rows: [
     {
       key: {
-        text: "Certified by"
+        text: ""
       },
       value: {
-        text: "Rufus Titterington"
+        text: ""
       }
     },
     {
       key: {
-        text: "Date certified"
+        text: ""
       },
       value: {
-        text: "30 March 2019 at 12:15pm"
+        text: ""
       }
     },
     {
       key: {
-        text: "Reason"
+        text: ""
       },
       value: {
-        html: "72 Guild Street<br>London<br>SE23 6FH"
+        text: ""
       }
     },
     {
       key: {
-        text: "Contact details"
+        text: ""
       },
       value: {
-        text: "I attended the main hearing (1st day of trial)"
+        text: ""
       }
     }
   ]
