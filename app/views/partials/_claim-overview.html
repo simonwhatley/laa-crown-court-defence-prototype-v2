@@ -12,7 +12,7 @@
       <span class="govuk-caption-l">
         Status
       </span>
-      Allocated
+      {{ data.status | title }}
     </h1>
   </div>
   <div class="govuk-grid-column-one-third">
@@ -20,7 +20,7 @@
       <span class="govuk-caption-l">
         Assessed date
       </span>
-      Not yet assessed
+      {%- if data.status == "submitted" %}Not yet assessed{% else %}1 July 2019{% endif -%}
     </h1>
   </div>
 </div>
@@ -31,15 +31,23 @@
       <span class="govuk-caption-l">
         Defendant
       </span>
-      Philippine Struttman
+      Louisa Toupe
     </h1>
   </div>
   <div class="govuk-grid-column-one-third">
     <h1 class="govuk-heading-l">
+      {%- if data.provider_type == "advocate" %}
+      <span class="govuk-caption-l">
+        Instructed advocate
+      </span>
+      Guthrie Featherstone
+      {% endif -%}
+      {%- if data.provider_type == "litigator" %}
       <span class="govuk-caption-l">
         Firm
       </span>
       Petty &amp; France LLP
+      {% endif -%}
     </h1>
   </div>
   <div class="govuk-grid-column-one-third">

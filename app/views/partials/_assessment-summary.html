@@ -2,6 +2,8 @@
   Assessment summary
 </h2>
 
+{%- if data.provider_type == "advocate" %}
+
 {{ govukTable({
   firstCellIsHeader: false,
   head: [
@@ -9,22 +11,26 @@
       text: "Description"
     },
     {
-      text: "Claimed by provider"
+      text: "Total claimed",
+      format: "numeric"
     },
     {
-      text: "Total authorised by LAA"
+      text: "Total authorised by LAA",
+      format: "numeric"
     }
   ],
   rows: [
     [
       {
-        text: "Graduated fees"
+        text: (data.fee_type if data.fee_type else data.bill_type) | title + " fees"
       },
       {
-        text: "£0.00"
+        text: "£0.00",
+        format: "numeric"
       },
       {
-        text: "£0.00"
+        text: "£0.00",
+        format: "numeric"
       }
     ],
     [
@@ -32,10 +38,12 @@
         text: "Miscellaneous fees"
       },
       {
-        text: "£0.00"
+        text: "£0.00",
+        format: "numeric"
       },
       {
-        text: "£0.00"
+        text: "£0.00",
+        format: "numeric"
       }
     ],
     [
@@ -43,25 +51,122 @@
         text: "Travel expenses"
       },
       {
-        text: "£0.00"
+        text: "£0.00",
+        format: "numeric"
       },
       {
-        text: "£0.00"
+        text: "£0.00",
+        format: "numeric"
       }
     ],
     [
       {
-        text: "Claim total",
+        text: "Total",
         classes: "govuk-!-font-weight-bold"
       },
       {
         text: "£0.00",
+        format: "numeric",
         classes: "govuk-!-font-weight-bold"
       },
       {
         text: "£0.00",
+        format: "numeric",
         classes: "govuk-!-font-weight-bold"
       }
     ]
   ]
 }) }}
+
+{% endif -%}
+
+{%- if data.provider_type == "litigator" %}
+
+{{ govukTable({
+  firstCellIsHeader: false,
+  head: [
+    {
+      text: "Description"
+    },
+    {
+      text: "Total claimed",
+      format: "numeric"
+    },
+    {
+      text: "Total authorised by LAA",
+      format: "numeric"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: (data.fee_type if data.fee_type else data.bill_type) | title + " fees"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Miscellaneous fees"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Disbursements"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Travel expenses"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Total",
+        classes: "govuk-!-font-weight-bold"
+      },
+      {
+        text: "£0.00",
+        format: "numeric",
+        classes: "govuk-!-font-weight-bold"
+      },
+      {
+        text: "£0.00",
+        format: "numeric",
+        classes: "govuk-!-font-weight-bold"
+      }
+    ]
+  ]
+}) }}
+
+{% endif -%}

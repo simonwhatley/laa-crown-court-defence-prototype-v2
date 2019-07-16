@@ -27,7 +27,7 @@
   rows: [
     [
       {
-        text: data.fee_type | title + " fees"
+        text: (data.fee_type if data.fee_type else data.bill_type) | title + " fees"
       },
       {
         text: "£0.00",
@@ -126,7 +126,7 @@
   rows: [
     [
       {
-        text: data.fee_type | title + " fees"
+        text: (data.fee_type if data.fee_type else data.bill_type) | title + " fees"
       },
       {
         text: "£0.00",

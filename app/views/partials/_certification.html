@@ -2,6 +2,8 @@
   Certification
 </h2>
 
+{%- if data.provider_type == "advocate" %}
+
 {{ govukSummaryList({
   rows: [
     {
@@ -25,16 +27,35 @@
         text: "Reason"
       },
       value: {
-        html: "72 Guild Street<br>London<br>SE23 6FH"
-      }
-    },
-    {
-      key: {
-        text: "Contact details"
-      },
-      value: {
         text: "I attended the main hearing (1st day of trial)"
       }
     }
   ]
 }) }}
+
+{% endif -%}
+
+{%- if data.provider_type == "litigator" %}
+
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "Certified by"
+      },
+      value: {
+        text: "Rufus Titterington"
+      }
+    },
+    {
+      key: {
+        text: "Date certified"
+      },
+      value: {
+        text: "30 March 2019 at 12:15pm"
+      }
+    }
+  ]
+}) }}
+
+{% endif -%}

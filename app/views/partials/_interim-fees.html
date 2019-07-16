@@ -1,9 +1,11 @@
 <h2 class="govuk-heading-l govuk-!-margin-top-8">
   Interim fees
+  {%- if data.status == "draft" %}
   <a href="#" class="link-change">
     Change
     <span class="govuk-visually-hidden">&nbsp;interim fees</span>
   </a>
+  {% endif -%}
 </h2>
 
 {{ govukSummaryList({

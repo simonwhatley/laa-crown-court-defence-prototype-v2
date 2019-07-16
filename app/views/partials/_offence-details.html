@@ -1,9 +1,11 @@
 <h2 class="govuk-heading-l govuk-!-margin-top-8">
   Offence details
+  {%- if data.status == "draft" %}
   <a href="#" class="link-change">
     Change
     <span class="govuk-visually-hidden">&nbsp;offence details</span>
   </a>
+  {% endif -%}
 </h2>
 
 {%- if data.fee_scheme_version == "9" %}

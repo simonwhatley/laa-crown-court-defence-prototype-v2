@@ -1,9 +1,11 @@
 <h2 class="govuk-heading-l govuk-!-margin-top-8">
   Defendant details
+  {%- if data.status == "draft" %}
   <a href="#" class="link-change">
     Change
     <span class="govuk-visually-hidden">&nbsp;defendant details</span>
   </a>
+  {% endif -%}
 </h2>
 
 <!-- <h3 class="govuk-heading-m">
@@ -33,7 +35,7 @@
         text: "Date of birth"
       },
       value: {
-        html: "16/09/1975"
+        html: "16 September 1975"
       }
     },
     {
@@ -49,7 +51,7 @@
         text: "Representation order date"
       },
       value: {
-        text: "08/12/2018"
+        text: "8 December 2018"
       }
     },
     {

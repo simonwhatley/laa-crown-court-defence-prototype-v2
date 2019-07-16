@@ -1,9 +1,11 @@
 <h2 class="govuk-heading-m govuk-!-margin-top-8">
   Retrial details
+  {%- if data.status == "draft" %}
   <a href="#" class="link-change">
     Change
     <span class="govuk-visually-hidden">&nbsp;retrial details</span>
   </a>
+  {% endif -%}
 </h2>
 
 {{ govukSummaryList({

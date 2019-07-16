@@ -1,9 +1,11 @@
 <h2 class="govuk-heading-l govuk-!-margin-top-8">
   Case details
+  {%- if data.status == "draft" %}
   <a href="#" class="link-change">
     Change
     <span class="govuk-visually-hidden">&nbsp;case details</span>
   </a>
+  {% endif -%}
 </h2>
 
 {%- if data.provider_type == "advocate" %}
@@ -47,7 +49,7 @@
         text: "Case number"
       },
       value: {
-        text: 'T20190103'
+        text: 'T20190301'
       }
     }
   ]
@@ -56,5 +58,58 @@
 {% endif -%}
 
 {%- if data.provider_type == "litigator" %}
+
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "Supplier number"
+      },
+      value: {
+        text: "1B555X"
+      }
+    },
+    {
+      key: {
+        text: "Reference number"
+      },
+      value: {
+        text: "GF/LT/75674990"
+      }
+    },
+    {
+      key: {
+        text: "Case type"
+      },
+      value: {
+        html: "Retrial"
+      }
+    },
+    {
+      key: {
+        text: "Court"
+      },
+      value: {
+        text: "Wolverhampton Crown court"
+      }
+    },
+    {
+      key: {
+        text: "Case number"
+      },
+      value: {
+        text: 'T20190103'
+      }
+    },
+    {
+      key: {
+        text: "Date case concluded"
+      },
+      value: {
+        text: "13 March 2019"
+      }
+    }
+  ]
+}) }}
 
 {% endif -%}

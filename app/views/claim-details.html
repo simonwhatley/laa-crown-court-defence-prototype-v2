@@ -32,387 +32,75 @@
 
       {% include "./partials/_claim-overview.html" %}
 
-      {% include "./partials/_assessment-summary.html" %}
+      {%- if data.status == "assessed" %}
+        {% include "./partials/_assessment-summary.html" %}
+      {% endif -%}
+
+      {%- if data.status == "submitted" %}
+        {% include "./partials/_cost-summary.html" %}
+      {% endif -%}
 
       {% include "./partials/_certification.html" %}
 
-      <h2 class="govuk-heading-l">Case details</h2>
+      {%- if data.bill_type == "transfer" %}
+        {% include "./partials/_transfer-details.html" %}
+      {% endif -%}
 
-      {{ govukTable({
-        firstCellIsHeader: true,
-        rows: [
-          [
-            {
-              text: "Instructed advocate"
-            },
-            {
-              text: "Guthrie Featherstone (0020X)"
-            }
-          ],
-          [
-            {
-              text: "Reference number"
-            },
-            {
-              text: "GF/LT/75674990"
-            }
-          ],
-          [
-            {
-              text: "Case type"
-            },
-            {
-              text: "Retrial"
-            }
-          ],
-          [
-            {
-              text: "Court"
-            },
-            {
-              text: "Inner London"
-            }
-          ],
-          [
-            {
-              text: "Case number"
-            },
-            {
-              text: "T20180103"
-            }
-          ]
-        ]
-      }) }}
+      {% include "./partials/_case-details.html" %}
 
-      <h2 class="govuk-heading-l">Trial details</h2>
+      {%- if data.case_type in ["trial","retrial"] %}
+        {% include "./partials/_trial.html" %}
+      {% endif -%}
 
+      {%- if data.case_type == "retrial" %}
+        {% include "./partials/_retrial.html" %}
+      {% endif -%}
 
-      <h2 class="govuk-heading-l">Retrial details</h2>
+      {%- if data.case_type == "cracked-trial" %}
+        {% include "./partials/_cracked-trial.html" %}
+      {% endif -%}
 
-      <h2 class="govuk-heading-l">Defendant details</h2>
+      {%- if data.case_type == "cracked-before-retrial" %}
+        {% include "./partials/_cracked-before-retrial.html" %}
+      {% endif -%}
 
-      <h3 class="govuk-heading-m">Defendant 1</h3>
+      {% include "./partials/_defendant-details.html" %}
 
-      {{ govukTable({
-        firstCellIsHeader: true,
-        rows: [
-          [
-            {
-              text: "First name"
-            },
-            {
-              text: "Louisa"
-            }
-          ],
-          [
-            {
-              text: "Last name"
-            },
-            {
-              text: "Toop"
-            }
-          ],
-          [
-            {
-              text: "Date of birth"
-            },
-            {
-              html: '<time datetime="1975-09-16">16/09/1975</time>'
-            }
-          ],
-          [
-            {
-              text: "Order for judicial apportionment"
-            },
-            {
-              text: "No"
-            }
-          ]
-        ]
-      }) }}
+      {%- if data.fee_type == "graduated" %}
+        {% include "./partials/_offence-details.html" %}
+      {% endif -%}
 
-      <h4 class="govuk-heading-s">Representation order 1</h4>
-  
-      {{ govukTable({
-        firstCellIsHeader: true,
-        rows: [
-          [
-            {
-              text: "Representation order date"
-            },
-            {
-              html: '<time datetime="2017-12-08">08/12/2017</time>'
-            }
-          ],
-          [
-            {
-              text: "MAAT reference"
-            },
-            {
-              text: "75674990"
-            }
-          ]
-        ]
-      }) }}
+      {%- if data.bill_type == "final" and data.fee_type == "fixed" %}
+        {% include "./partials/_fixed-fees.html" %}
+      {% endif -%}
 
+      {%- if data.bill_type == "final" and data.fee_type == "graduated" %}
+        {% include "./partials/_graduated-fees.html" %}
+      {% endif -%}
 
-      <h2 class="govuk-heading-l">Offence details</h2>
-  
-      {{ govukTable({
-        firstCellIsHeader: true,
-        rows: [
-          [
-            {
-              text: ""
-            },
-            {
-              text: ""
-            }
-          ],
-          [
-            {
-              text: ""
-            },
-            {
-              text: ""
-            }
-          ],
-          [
-            {
-              text: ""
-            },
-            {
-              text: ""
-            }
-          ]
-        ]
-      }) }}
+      {%- if data.bill_type == "interim" %}
+        {% include "./partials/_interim-fees.html" %}
+      {% endif -%}
 
+      {%- if data.bill_type == "warrant" %}
+        {% include "./partials/_warrant-fees.html" %}
+      {% endif -%}
 
-      <h2 class="govuk-heading-l">Fixed fees</h2>
-  
-      {{ govukTable({
-        firstCellIsHeader: true,
-        rows: [
-          [
-            {
-              text: ""
-            },
-            {
-              text: ""
-            }
-          ],
-          [
-            {
-              text: ""
-            },
-            {
-              text: ""
-            }
-          ],
-          [
-            {
-              text: ""
-            },
-            {
-              text: ""
-            }
-          ]
-        ]
-      }) }}
+      {%- if data.bill_type == "transfer" %}
+        {% include "./partials/_transfer-fees.html" %}
+      {% endif -%}
 
-      <h2 class="govuk-heading-l">Graduated fees</h2>
-  
-      {{ govukTable({
-        firstCellIsHeader: true,
-        rows: [
-          [
-            {
-              text: ""
-            },
-            {
-              text: ""
-            }
-          ],
-          [
-            {
-              text: ""
-            },
-            {
-              text: ""
-            }
-          ],
-          [
-            {
-              text: ""
-            },
-            {
-              text: ""
-            }
-          ]
-        ]
-      }) }}
+      {% include "./partials/_miscellaneous-fees.html" %}
 
-      <h2 class="govuk-heading-l">Miscellaneous fees</h2>
-  
-      {{ govukTable({
-        firstCellIsHeader: true,
-        rows: [
-          [
-            {
-              text: ""
-            },
-            {
-              text: ""
-            }
-          ],
-          [
-            {
-              text: ""
-            },
-            {
-              text: ""
-            }
-          ],
-          [
-            {
-              text: ""
-            },
-            {
-              text: ""
-            }
-          ]
-        ]
-      }) }}
+      {%- if data.fee_scheme == "lgfs" %}
+        {% include "./partials/_disbursements.html" %}
+      {% endif -%}
 
-      <h2 class="govuk-heading-l">Disbursements</h2>
-  
-      {{ govukTable({
-        firstCellIsHeader: true,
-        rows: [
-          [
-            {
-              text: ""
-            },
-            {
-              text: ""
-            }
-          ],
-          [
-            {
-              text: ""
-            },
-            {
-              text: ""
-            }
-          ],
-          [
-            {
-              text: ""
-            },
-            {
-              text: ""
-            }
-          ]
-        ]
-      }) }}
+      {% include "./partials/_travel-expenses.html" %}
 
-      <h2 class="govuk-heading-l">Travel expenses</h2>
-  
-      {{ govukTable({
-        firstCellIsHeader: true,
-        rows: [
-          [
-            {
-              text: ""
-            },
-            {
-              text: ""
-            }
-          ],
-          [
-            {
-              text: ""
-            },
-            {
-              text: ""
-            }
-          ],
-          [
-            {
-              text: ""
-            },
-            {
-              text: ""
-            }
-          ]
-        ]
-      }) }}
+      {% include "./partials/_supporting-evidence.html" %}
 
-      <h2 class="govuk-heading-l">Supporting evidence</h2>
-  
-      {{ govukTable({
-        firstCellIsHeader: true,
-        rows: [
-          [
-            {
-              text: ""
-            },
-            {
-              text: ""
-            }
-          ],
-          [
-            {
-              text: ""
-            },
-            {
-              text: ""
-            }
-          ],
-          [
-            {
-              text: ""
-            },
-            {
-              text: ""
-            }
-          ]
-        ]
-      }) }}
-
-      <h2 class="govuk-heading-l">Additional information</h2>
-  
-      {{ govukTable({
-        firstCellIsHeader: true,
-        rows: [
-          [
-            {
-              text: ""
-            },
-            {
-              text: ""
-            }
-          ],
-          [
-            {
-              text: ""
-            },
-            {
-              text: ""
-            }
-          ],
-          [
-            {
-              text: ""
-            },
-            {
-              text: ""
-            }
-          ]
-        ]
-      }) }}
     </div>
-</div>
+  </div>
 
 {% endblock %}

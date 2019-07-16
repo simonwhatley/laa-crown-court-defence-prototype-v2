@@ -22,12 +22,7 @@
         {{ serviceName }}
       </h1>
 
-      <h2 class="govuk-heading-l">Pages and partials</h2>
-
-      <!-- <ul class="govuk-list govuk-list--bullet">
-        <li><a href="/claim-summary">Claim summary</a> – </li>
-        <li><a href="/claim-details">Claim details</a> – </li>
-      </ul> -->
+      <h2 class="govuk-heading-l">Pages</h2>
 
       <h2 class="govuk-heading-m">Claim summary</h2>
 
@@ -332,7 +327,7 @@
               text: ""
             },
             {
-              text: "Graduated"
+              text: ""
             },
             {
               text: "LGFS"
@@ -344,7 +339,7 @@
               text: "Draft"
             },
             {
-              html: '<a href="./claim-summary?provider_type=litigator&bill_type=interim&case_type=&fee_type=graduated&fee_scheme=lgfs&fee_scheme_version=9&status=draft">View</a>'
+              html: '<a href="./claim-summary?provider_type=litigator&bill_type=interim&case_type=&fee_type=&fee_scheme=lgfs&fee_scheme_version=9&status=draft">View</a>'
             }
           ],
           [
@@ -358,7 +353,7 @@
               text: ""
             },
             {
-              text: "Graduated"
+              text: ""
             },
             {
               text: "LGFS"
@@ -370,7 +365,7 @@
               text: "Draft"
             },
             {
-              html: '<a href="./claim-summary?provider_type=litigator&bill_type=transfer&case_type=&fee_type=graduated&fee_scheme=lgfs&fee_scheme_version=9&status=draft">View</a>'
+              html: '<a href="./claim-summary?provider_type=litigator&bill_type=transfer&case_type=&fee_type=&fee_scheme=lgfs&fee_scheme_version=9&status=draft">View</a>'
             }
           ],
           [
@@ -402,12 +397,15 @@
         ]
       }) }}
 
-      <h2 class="govuk-heading-m">Claim details</h2>
+      <h2 class="govuk-heading-m govuk-!-margin-top-8">Claim details</h2>
 
       <p>Let users view their claim after submitting.</p>
 
       {{ govukTable({
         head: [
+          {
+            text: "Provider type"
+          },
           {
             text: "Bill type"
           },
@@ -415,86 +413,414 @@
             text: "Case type"
           },
           {
-            text: "Advocates"
+            text: "Fee type"
           },
           {
-            text: "Litigators"
+            text: "Fee scheme"
+          },
+          {
+            text: "Fee scheme version"
+          },
+          {
+            text: "Status"
+          },
+          {
+            text: "Example"
           }
         ],
         rows: [
           [
             {
-              text: "Final fee"
+              text: "Advocate"
             },
             {
-              text: " "
+              text: "Final"
             },
             {
-              html: '<a href="/claim-details">View</a>'
+              text: "Trial"
             },
             {
-              html: '<a href="/claim-details">View</a>'
+              text: "Graduated"
+            },
+            {
+              text: "AGFS"
+            },
+            {
+              text: "10"
+            },
+            {
+              text: "Submitted"
+            },
+            {
+              html: '<a href="./claim-details?provider_type=advocate&bill_type=final&case_type=trial&fee_type=graduated&fee_scheme=agfs&fee_scheme_version=10&status=submitted">View</a>'
             }
           ],
           [
             {
-              text: "Interim fee"
+              text: "Advocate"
             },
             {
-              text: " "
+              text: "Final"
             },
             {
-              text: "n/a"
+              text: "Trial"
             },
             {
-              html: '<a href="/claim-details">View</a>'
+              text: "Graduated"
+            },
+            {
+              text: "AGFS"
+            },
+            {
+              text: "10"
+            },
+            {
+              text: "Assessed"
+            },
+            {
+              html: '<a href="./claim-details?provider_type=advocate&bill_type=final&case_type=trial&fee_type=graduated&fee_scheme=agfs&fee_scheme_version=10&status=assessed">View</a>'
             }
           ],
           [
             {
-              text: "Transfer fee"
+              text: "Advocate"
             },
             {
-              text: " "
+              text: "Final"
             },
             {
-              text: "n/a"
+              text: "Cracked trial"
             },
             {
-              html: '<a href="/claim-details">View</a>'
+              text: "Graduated"
+            },
+            {
+              text: "AGFS"
+            },
+            {
+              text: "10"
+            },
+            {
+              text: "Submitted"
+            },
+            {
+              html: '<a href="./claim-details?provider_type=advocate&bill_type=final&case_type=cracked-trial&fee_type=graduated&fee_scheme=agfs&fee_scheme_version=10&status=submitted">View</a>'
             }
           ],
           [
             {
-              text: "Warrant fee"
+              text: "Advocate"
             },
             {
-              text: " "
+              text: "Final"
             },
             {
-              html: '<a href="/claim-details">View</a>'
+              text: "Retrial"
             },
             {
-              text: "n/a"
+              text: "Graduated"
+            },
+            {
+              text: "AGFS"
+            },
+            {
+              text: "10"
+            },
+            {
+              text: "Submitted"
+            },
+            {
+              html: '<a href="./claim-details?provider_type=advocate&bill_type=final&case_type=retrial&fee_type=graduated&fee_scheme=agfs&fee_scheme_version=10&status=submitted">View</a>'
             }
           ],
           [
             {
-              text: "Supplementary fee"
+              text: "Advocate"
             },
             {
-              text: " "
+              text: "Final"
             },
             {
-              html: '<a href="/claim-details">View</a>'
+              text: "Cracked before retrial"
             },
             {
-              html: '<a href="/claim-details">View</a>'
+              text: "Graduated"
+            },
+            {
+              text: "AGFS"
+            },
+            {
+              text: "10"
+            },
+            {
+              text: "Submitted"
+            },
+            {
+              html: '<a href="./claim-details?provider_type=advocate&bill_type=final&case_type=cracked-before-retrial&fee_type=graduated&fee_scheme=agfs&fee_scheme_version=10&status=submitted">View</a>'
+            }
+          ],
+          [
+            {
+              text: "Advocate"
+            },
+            {
+              text: "Final"
+            },
+            {
+              text: "Appeal against conviction"
+            },
+            {
+              text: "Fixed"
+            },
+            {
+              text: "AGFS"
+            },
+            {
+              text: "10"
+            },
+            {
+              text: "Submitted"
+            },
+            {
+              html: '<a href="./claim-details?provider_type=advocate&bill_type=final&case_type=appeal-against-conviction&fee_type=fixed&fee_scheme=agfs&fee_scheme_version=10&status=submitted">View</a>'
+            }
+          ],
+          [
+            {
+              text: "Advocate"
+            },
+            {
+              text: "Warrant"
+            },
+            {
+              text: ""
+            },
+            {
+              text: ""
+            },
+            {
+              text: "AGFS"
+            },
+            {
+              text: "10"
+            },
+            {
+              text: "Submitted"
+            },
+            {
+              html: '<a href="./claim-details?provider_type=advocate&bill_type=warrant&case_type=&fee_type=&fee_scheme=agfs&fee_scheme_version=10&status=submitted">View</a>'
+            }
+          ],
+          [
+            {
+              text: "Advocate"
+            },
+            {
+              text: "Supplementary"
+            },
+            {
+              text: ""
+            },
+            {
+              text: ""
+            },
+            {
+              text: "AGFS"
+            },
+            {
+              text: ""
+            },
+            {
+              text: "Submitted"
+            },
+            {
+              html: '<a href="./claim-details?provider_type=advocate&bill_type=supplementary&case_type=&fee_type=&fee_scheme=agfs&fee_scheme_version=&status=submitted">View</a>'
+            }
+          ],
+          [
+            {
+              text: "Litigator"
+            },
+            {
+              text: "Final"
+            },
+            {
+              text: ""
+            },
+            {
+              text: "Graduated"
+            },
+            {
+              text: "LGFS"
+            },
+            {
+              text: "9"
+            },
+            {
+              text: "Submitted"
+            },
+            {
+              html: '<a href="./claim-details?provider_type=litigator&bill_type=final&case_type=&fee_type=graduated&fee_scheme=lgfs&fee_scheme_version=9&status=submitted">View</a>'
+            }
+          ],
+          [
+            {
+              text: "Litigator"
+            },
+            {
+              text: "Final"
+            },
+            {
+              text: ""
+            },
+            {
+              text: "Graduated"
+            },
+            {
+              text: "LGFS"
+            },
+            {
+              text: "9"
+            },
+            {
+              text: "Assessed"
+            },
+            {
+              html: '<a href="./claim-details?provider_type=litigator&bill_type=final&case_type=&fee_type=graduated&fee_scheme=lgfs&fee_scheme_version=9&status=assessed">View</a>'
+            }
+          ],
+          [
+            {
+              text: "Litigator"
+            },
+            {
+              text: "Final"
+            },
+            {
+              text: ""
+            },
+            {
+              text: "Graduated"
+            },
+            {
+              text: "LGFS"
+            },
+            {
+              text: "9"
+            },
+            {
+              text: "Submitted"
+            },
+            {
+              html: '<a href="./claim-details?provider_type=litigator&bill_type=final&case_type=&fee_type=graduated&fee_scheme=lgfs&fee_scheme_version=9&status=submitted">View</a>'
+            }
+          ],
+          [
+            {
+              text: "Litigator"
+            },
+            {
+              text: "Final"
+            },
+            {
+              text: ""
+            },
+            {
+              text: "Fixed"
+            },
+            {
+              text: "LGFS"
+            },
+            {
+              text: "9"
+            },
+            {
+              text: "Submitted"
+            },
+            {
+              html: '<a href="./claim-details?provider_type=litigator&bill_type=final&case_type=&fee_type=fixed&fee_scheme=lgfs&fee_scheme_version=9&status=submitted">View</a>'
+            }
+          ],
+          [
+            {
+              text: "Litigator"
+            },
+            {
+              text: "Interim"
+            },
+            {
+              text: ""
+            },
+            {
+              text: ""
+            },
+            {
+              text: "LGFS"
+            },
+            {
+              text: "9"
+            },
+            {
+              text: "Submitted"
+            },
+            {
+              html: '<a href="./claim-details?provider_type=litigator&bill_type=interim&case_type=&fee_type=&fee_scheme=lgfs&fee_scheme_version=9&status=submitted">View</a>'
+            }
+          ],
+          [
+            {
+              text: "Litigator"
+            },
+            {
+              text: "Transfer"
+            },
+            {
+              text: ""
+            },
+            {
+              text: ""
+            },
+            {
+              text: "LGFS"
+            },
+            {
+              text: "9"
+            },
+            {
+              text: "Submitted"
+            },
+            {
+              html: '<a href="./claim-details?provider_type=litigator&bill_type=transfer&case_type=&fee_type=&fee_scheme=lgfs&fee_scheme_version=9&status=submitted">View</a>'
+            }
+          ],
+          [
+            {
+              text: "Litigator"
+            },
+            {
+              text: "Supplementary"
+            },
+            {
+              text: ""
+            },
+            {
+              text: ""
+            },
+            {
+              text: "LGFS"
+            },
+            {
+              text: ""
+            },
+            {
+              text: "Submitted"
+            },
+            {
+              html: '<a href="./claim-details?provider_type=litigator&bill_type=supplementary&case_type=&fee_type=&fee_scheme=lgfs&fee_scheme_version=&status=submitted">View</a>'
             }
           ]
         ]
       }) }}
-
 
     </div>
 </div>
