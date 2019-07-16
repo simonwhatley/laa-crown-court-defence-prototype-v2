@@ -1,0 +1,101 @@
+<h2 class="govuk-heading-l">
+  Supporting evidence
+</h2>
+
+{% set supportingEvidenceFilelist %}
+<ul class="govuk-list govuk-list--bullet">
+  <li>
+    <a class="govuk-link" href="#">File 1</a>
+  </li>
+  <li>
+    <a class="govuk-link" href="#">File 2</a>
+  </li>
+  <li>
+    <a class="govuk-link" href="#">File 3</a>
+  </li>
+  <li>
+    <a class="govuk-link" href="#">File 4</a>
+  </li>
+</ul>
+{% endset %}
+
+{% set supportingEvidenceChecklist %}
+<ul class="govuk-list govuk-list--bullet">
+  <li>Representation order</li>
+  <li>Expenses invoices</li>
+  <li>Special preparation form</li>
+</ul>
+{% endset %}
+
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "Will you be sending disk evidence for this claim?"
+      },
+      value: {
+        text: "No"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "whether you will be sending disk evidence"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Supporting evidence"
+      },
+      value: {
+        html: supportingEvidenceFilelist
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "supporting evidence"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Supporting evidence checklist"
+      },
+      value: {
+        html: supportingEvidenceChecklist
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "supporting evidence checklist"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Additional information"
+      },
+      value: {
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec quam lectus. Nunc quis libero maximus, pharetra nunc id, ultrices mauris. Donec faucibus nunc in metus pretium, posuere fermentum ipsum interdum. Praesent condimentum, mauris eget commodo pulvinar, turpis leo sollicitudin massa, sed iaculis massa purus non lectus. Proin molestie mattis nibh nec laoreet. Nam pulvinar orci eu nibh egestas dictum. Nullam quis dapibus nulla."
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "additional information"
+          }
+        ]
+      }
+    }
+  ]
+}) }}

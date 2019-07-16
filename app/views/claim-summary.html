@@ -25,90 +25,69 @@
 {% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
+    <div class="govuk-grid-column-full govuk-!-margin-bottom-8">
       <h1 class="govuk-heading-xl">
         Claim summary
       </h1>
   
-      {{ govukTable({
-        firstCellIsHeader: false,
-        head: [
+      {% include "./partials/_cost-summary.html" %}
+
+      {{ mojMenu({
+        items: [
           {
-            text: "Description"
+            text: "Save and continue",
+            href: "#"
           },
           {
-            text: "Net amount"
+            text: "Save as draft",
+            href: "#",
+            classes: "govuk-button--secondary"
           },
           {
-            text: "VAT"
-          },
-          {
-            text: "Gross amount"
+            text: "Delete claim",
+            href: "#",
+            classes: "govuk-button--warning"
           }
-        ],
-        rows: [
-          [
-            {
-              text: "Graduated fees"
-            },
-            {
-              text: "£0.00"
-            },
-            {
-              text: "£0.00"
-            },
-            {
-              text: "£0.00"
-            }
-          ],
-          [
-            {
-              text: "Miscellaneous fees"
-            },
-            {
-              text: "£0.00"
-            },
-            {
-              text: "£0.00"
-            },
-            {
-              text: "£0.00"
-            }
-          ],
-          [
-            {
-              text: "Travel expenses"
-            },
-            {
-              text: "£0.00"
-            },
-            {
-              text: "£0.00"
-            },
-            {
-              text: "£0.00"
-            }
-          ],
-          [
-            {
-              text: "Claim total",
-              classes: "govuk-!-font-weight-bold"
-            },
-            {
-              text: "£0.00",
-              classes: "govuk-!-font-weight-bold"
-            },
-            {
-              text: "£0.00",
-              classes: "govuk-!-font-weight-bold"
-            },
-            {
-              text: "£0.00",
-              classes: "govuk-!-font-weight-bold"
-            }
-          ]
         ]
       }) }}
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      {% include "./partials/_transfer-details.html" %}
+
+      {% include "./partials/_case-details.html" %}
+
+      {% include "./partials/_trial.html" %}
+
+      {% include "./partials/_retrial.html" %}
+
+      {% include "./partials/_cracked-trial.html" %}
+
+      {% include "./partials/_cracked-before-retrial.html" %}
+
+      {% include "./partials/_defendant-details.html" %}
+
+      {% include "./partials/_offence-details.html" %}
+
+      {% include "./partials/_fixed-fees.html" %}
+
+      {% include "./partials/_graduated-fees.html" %}
+
+      {% include "./partials/_interim-fees.html" %}
+
+      {% include "./partials/_transfer-fees.html" %}
+
+      {% include "./partials/_miscellaneous-fees.html" %}
+
+      {% include "./partials/_disbursements.html" %}
+
+      {% include "./partials/_travel-expenses.html" %}
+
+      {% include "./partials/_supporting-evidence.html" %}
 
       
     </div>

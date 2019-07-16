@@ -1,0 +1,67 @@
+<h2 class="govuk-heading-l">
+  Assessment summary
+</h2>
+
+{{ govukTable({
+  firstCellIsHeader: false,
+  head: [
+    {
+      text: "Description"
+    },
+    {
+      text: "Claimed by provider"
+    },
+    {
+      text: "Total authorised by LAA"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Graduated fees"
+      },
+      {
+        text: "£0.00"
+      },
+      {
+        text: "£0.00"
+      }
+    ],
+    [
+      {
+        text: "Miscellaneous fees"
+      },
+      {
+        text: "£0.00"
+      },
+      {
+        text: "£0.00"
+      }
+    ],
+    [
+      {
+        text: "Travel expenses"
+      },
+      {
+        text: "£0.00"
+      },
+      {
+        text: "£0.00"
+      }
+    ],
+    [
+      {
+        text: "Claim total",
+        classes: "govuk-!-font-weight-bold"
+      },
+      {
+        text: "£0.00",
+        classes: "govuk-!-font-weight-bold"
+      },
+      {
+        text: "£0.00",
+        classes: "govuk-!-font-weight-bold"
+      }
+    ]
+  ]
+}) }}

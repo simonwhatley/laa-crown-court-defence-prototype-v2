@@ -1,0 +1,59 @@
+<h2 class="govuk-heading-l">
+  Offence details
+</h2>
+
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "Offence class"
+      },
+      value: {
+        text: "Murder and Manslaughter"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "offence class"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Offence band"
+      },
+      value: {
+        text: "Band 1.1"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "offence band"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Offence category"
+      },
+      value: {
+        text: "Murder"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "offence category"
+          }
+        ]
+      }
+    }
+  ]
+}) }}

@@ -1,0 +1,98 @@
+<h2 class="govuk-heading-l">
+  Cost summary
+</h2>
+
+{{ govukTable({
+  firstCellIsHeader: false,
+  head: [
+    {
+      text: "Description"
+    },
+    {
+      text: "Net amount",
+      format: "numeric"
+    },
+    {
+      text: "VAT",
+      format: "numeric"
+    },
+    {
+      text: "Gross amount",
+      format: "numeric"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Graduated fees"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Miscellaneous fees"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Travel expenses"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Claim total",
+        classes: "govuk-!-font-weight-bold"
+      },
+      {
+        text: "£0.00",
+        format: "numeric",
+        classes: "govuk-!-font-weight-bold"
+      },
+      {
+        text: "£0.00",
+        format: "numeric",
+        classes: "govuk-!-font-weight-bold"
+      },
+      {
+        text: "£0.00",
+        format: "numeric",
+        classes: "govuk-!-font-weight-bold"
+      }
+    ]
+  ]
+}) }}

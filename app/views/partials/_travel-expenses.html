@@ -1,0 +1,858 @@
+<h2 class="govuk-heading-l">
+  Travel expenses
+</h2>
+
+{% include "./_travel-expenses-summary.html" %}
+
+{% include "./_travel-expenses-additional-information.html" %}
+
+<h3 class="govuk-heading-m">
+  Travel details
+</h3>
+
+{% set travelDetails %}
+<ul class="govuk-list">
+  <li>
+      <span class="govuk-!-font-weight-bold">Origin:</span>
+      Birmingham  (B4 6QB)
+    </li>
+    <li>
+      <span class="govuk-!-font-weight-bold">Destination:</span>
+      Wolverhampton (WV1 3LQ)
+    </li>
+    <li>
+      <span class="govuk-!-font-weight-bold">
+        Distance:
+      </span>
+      32 miles
+    </li>
+    <li>
+      <span class="govuk-!-font-weight-bold">Cost per mile:</span>
+      25p per mile
+    </li>
+</ul>
+{% endset %}
+
+{% set parkingDetails %}
+
+{% endset %}
+
+{% set subsistenceDetails %}
+<ul class="govuk-list">
+  <li>
+      <span class="govuk-!-font-weight-bold">Location:</span>
+      Wolverhampton
+    </li>
+</ul>
+{% endset %}
+
+{{ govukTable({
+  head: [
+    {
+      text: "Type of expense"
+    },
+    {
+      text: "Reason for travel"
+    },
+    {
+      text: "Details"
+    },
+    {
+      text: "Date of expense"
+    },
+    {
+      text: "Net amount",
+      format: "numeric"
+    },
+    {
+      text: "VAT amount",
+      format: "numeric"
+    },
+    {
+      text: "Total amount",
+      format: "numeric"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Car travel"
+      },
+      {
+        text: "Court hearing (Crown court)"
+      },
+      {
+        html: travelDetails
+      },
+      {
+        text: "01/03/2019"
+      },
+      {
+        text: "£8.00",
+        format: "numeric"
+      },
+      {
+        text: "£1.60",
+        format: "numeric"
+      },
+      {
+        text: "£9.60",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Car travel"
+      },
+      {
+        text: "Court hearing (Crown court)"
+      },
+      {
+        html: travelDetails
+      },
+      {
+        text: "04/03/2019"
+      },
+      {
+        text: "£8.00",
+        format: "numeric"
+      },
+      {
+        text: "£1.60",
+        format: "numeric"
+      },
+      {
+        text: "£9.60",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Car travel"
+      },
+      {
+        text: "Court hearing (Crown court)"
+      },
+      {
+        html: travelDetails
+      },
+      {
+        text: "05/03/2019"
+      },
+      {
+        text: "£8.00",
+        format: "numeric"
+      },
+      {
+        text: "£1.60",
+        format: "numeric"
+      },
+      {
+        text: "£9.60",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Car travel"
+      },
+      {
+        text: "Court hearing (Crown court)"
+      },
+      {
+        html: travelDetails
+      },
+      {
+        text: "06/03/2019"
+      },
+      {
+        text: "£8.00",
+        format: "numeric"
+      },
+      {
+        text: "£1.60",
+        format: "numeric"
+      },
+      {
+        text: "£9.60",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Car travel"
+      },
+      {
+        text: "Court hearing (Crown court)"
+      },
+      {
+        html: travelDetails
+      },
+      {
+        text: "07/03/2019"
+      },
+      {
+        text: "£8.00",
+        format: "numeric"
+      },
+      {
+        text: "£1.60",
+        format: "numeric"
+      },
+      {
+        text: "£9.60",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Car travel"
+      },
+      {
+        text: "Court hearing (Crown court)"
+      },
+      {
+        html: travelDetails
+      },
+      {
+        text: "08/03/2019"
+      },
+      {
+        text: "£8.00",
+        format: "numeric"
+      },
+      {
+        text: "£1.60",
+        format: "numeric"
+      },
+      {
+        text: "£9.60",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Car travel"
+      },
+      {
+        text: "Court hearing (Crown court)"
+      },
+      {
+        html: travelDetails
+      },
+      {
+        text: "11/03/2019"
+      },
+      {
+        text: "£8.00",
+        format: "numeric"
+      },
+      {
+        text: "£1.60",
+        format: "numeric"
+      },
+      {
+        text: "£9.60",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Car travel"
+      },
+      {
+        text: "Court hearing (Crown court)"
+      },
+      {
+        html: travelDetails
+      },
+      {
+        text: "12/03/2019"
+      },
+      {
+        text: "£8.00",
+        format: "numeric"
+      },
+      {
+        text: "£1.60",
+        format: "numeric"
+      },
+      {
+        text: "£9.60",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Car travel"
+      },
+      {
+        text: "Court hearing (Crown court)"
+      },
+      {
+        html: travelDetails
+      },
+      {
+        text: "13/03/2019"
+      },
+      {
+        text: "£8.00",
+        format: "numeric"
+      },
+      {
+        text: "£1.60",
+        format: "numeric"
+      },
+      {
+        text: "£9.60",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Car travel"
+      },
+      {
+        text: "Court hearing (Crown court)"
+      },
+      {
+        html: travelDetails
+      },
+      {
+        text: "14/03/2019"
+      },
+      {
+        text: "£8.00",
+        format: "numeric"
+      },
+      {
+        text: "£1.60",
+        format: "numeric"
+      },
+      {
+        text: "£9.60",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Parking"
+      },
+      {
+        text: "Court hearing (Crown court)"
+      },
+      {
+        html: parkingDetails
+      },
+      {
+        text: "01/03/2019"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "£4.20",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Parking"
+      },
+      {
+        text: "Court hearing (Crown court)"
+      },
+      {
+        html: parkingDetails
+      },
+      {
+        text: "04/03/2019"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "£4.20",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Parking"
+      },
+      {
+        text: "Court hearing (Crown court)"
+      },
+      {
+        html: parkingDetails
+      },
+      {
+        text: "05/03/2019"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "£4.20",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Parking"
+      },
+      {
+        text: "Court hearing (Crown court)"
+      },
+      {
+        html: parkingDetails
+      },
+      {
+        text: "06/03/2019"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "£4.20",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Parking"
+      },
+      {
+        text: "Court hearing (Crown court)"
+      },
+      {
+        html: parkingDetails
+      },
+      {
+        text: "07/03/2019"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "£4.20",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Parking"
+      },
+      {
+        text: "Court hearing (Crown court)"
+      },
+      {
+        html: parkingDetails
+      },
+      {
+        text: "08/03/2019"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "£4.20",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Parking"
+      },
+      {
+        text: "Court hearing (Crown court)"
+      },
+      {
+        html: parkingDetails
+      },
+      {
+        text: "11/03/2019"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "£4.20",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Parking"
+      },
+      {
+        text: "Court hearing (Crown court)"
+      },
+      {
+        html: parkingDetails
+      },
+      {
+        text: "12/03/2019"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "£4.20",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Parking"
+      },
+      {
+        text: "Court hearing (Crown court)"
+      },
+      {
+        html: parkingDetails
+      },
+      {
+        text: "13/03/2019"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "£4.20",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Parking"
+      },
+      {
+        text: "Court hearing (Crown court)"
+      },
+      {
+        html: parkingDetails
+      },
+      {
+        text: "14/03/2019"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "£4.20",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Subsistence"
+      },
+      {
+        text: "Court hearing (Crown court)"
+      },
+      {
+        html: subsistenceDetails
+      },
+      {
+        text: "01/03/2019"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "£10.84",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Subsistence"
+      },
+      {
+        text: "Court hearing (Crown court)"
+      },
+      {
+        html: subsistenceDetails
+      },
+      {
+        text: "04/03/2019"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "£7.85",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Subsistence"
+      },
+      {
+        text: "Court hearing (Crown court)"
+      },
+      {
+        html: subsistenceDetails
+      },
+      {
+        text: "05/03/2019"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "£8.59",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Subsistence"
+      },
+      {
+        text: "Court hearing (Crown court)"
+      },
+      {
+        html: subsistenceDetails
+      },
+      {
+        text: "06/03/2019"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "£9.09",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Subsistence"
+      },
+      {
+        text: "Court hearing (Crown court)"
+      },
+      {
+        html: subsistenceDetails
+      },
+      {
+        text: "07/03/2019"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "£8.13",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Subsistence"
+      },
+      {
+        text: "Court hearing (Crown court)"
+      },
+      {
+        html: subsistenceDetails
+      },
+      {
+        text: "08/03/2019"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "£12.43",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Subsistence"
+      },
+      {
+        text: "Court hearing (Crown court)"
+      },
+      {
+        html: subsistenceDetails
+      },
+      {
+        text: "11/03/2019"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "£10.08",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Subsistence"
+      },
+      {
+        text: "Court hearing (Crown court)"
+      },
+      {
+        html: subsistenceDetails
+      },
+      {
+        text: "12/03/2019"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "£8.35",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Subsistence"
+      },
+      {
+        text: "Court hearing (Crown court)"
+      },
+      {
+        html: subsistenceDetails
+      },
+      {
+        text: "13/03/2019"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "£12.85",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Subsistence"
+      },
+      {
+        text: "Court hearing (Crown court)"
+      },
+      {
+        html: subsistenceDetails
+      },
+      {
+        text: "14/03/2019"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "£11.98",
+        format: "numeric"
+      }
+    ]
+  ]
+}) }}

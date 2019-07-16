@@ -25,42 +25,16 @@
 {% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">
+    <div class="govuk-grid-column-full">
+      <!-- <h1 class="govuk-heading-xl">
         Claim details
-      </h1>
+      </h1> -->
 
-      <h2 class="govuk-heading-l">Certification</h2>
+      {% include "./partials/_claim-overview.html" %}
 
-      {{ govukTable({
-        firstCellIsHeader: true,
-        rows: [
-          [
-            {
-              text: "Certified by"
-            },
-            {
-              text: "Rufus Titterington"
-            }
-          ],
-          [
-            {
-              text: "Date certified"
-            },
-            {
-              text: "30/03/2018 at 12:00 pm"
-            }
-          ],
-          [
-            {
-              text: "Reason"
-            },
-            {
-              text: "I attended the main hearing (1st day of trial)"
-            }
-          ]
-        ]
-      }) }}
+      {% include "./partials/_assessment-summary.html" %}
+
+      {% include "./partials/_certification.html" %}
 
       <h2 class="govuk-heading-l">Case details</h2>
 

@@ -22,12 +22,200 @@
         {{ serviceName }}
       </h1>
 
-      <h2 class="govuk-heading-m">Examples and documentation</h2>
+      <h2 class="govuk-heading-l">Pages and partials</h2>
 
-      <ul class="govuk-list govuk-list--bullet">
+      <!-- <ul class="govuk-list govuk-list--bullet">
         <li><a href="/claim-summary">Claim summary</a> – </li>
         <li><a href="/claim-details">Claim details</a> – </li>
-      </ul>
+      </ul> -->
+
+      <h2 class="govuk-heading-m">Claim summary</h2>
+
+      <p>Let users check their claim before submitting.</p>
+
+      {{ govukTable({
+        head: [
+          {
+            text: "Bill type"
+          },
+          {
+            text: "Case type"
+          },
+          {
+            text: "Advocates"
+          },
+          {
+            text: "Litigators"
+          }
+        ],
+        rows: [
+          [
+            {
+              text: "Final fee"
+            },
+            {
+              text: " "
+            },
+            {
+              html: '<a href="/claim-summary">View</a>'
+            },
+            {
+              html: '<a href="/claim-summary">View</a>'
+            }
+          ],
+          [
+            {
+              text: "Interim fee"
+            },
+            {
+              text: " "
+            },
+            {
+              text: "n/a"
+            },
+            {
+              html: '<a href="/claim-summary">View</a>'
+            }
+          ],
+          [
+            {
+              text: "Transfer fee"
+            },
+            {
+              text: " "
+            },
+            {
+              text: "n/a"
+            },
+            {
+              html: '<a href="/claim-summary">View</a>'
+            }
+          ],
+          [
+            {
+              text: "Warrant fee"
+            },
+            {
+              text: " "
+            },
+            {
+              html: '<a href="/claim-summary">View</a>'
+            },
+            {
+              text: "n/a"
+            }
+          ],
+          [
+            {
+              text: "Supplementary fee"
+            },
+            {
+              text: " "
+            },
+            {
+              html: '<a href="/claim-summary">View</a>'
+            },
+            {
+              html: '<a href="/claim-summary">View</a>'
+            }
+          ]
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-m">Claim details</h2>
+
+      <p>Let users view their claim after submitting.</p>
+
+      {{ govukTable({
+        head: [
+          {
+            text: "Bill type"
+          },
+          {
+            text: "Case type"
+          },
+          {
+            text: "Advocates"
+          },
+          {
+            text: "Litigators"
+          }
+        ],
+        rows: [
+          [
+            {
+              text: "Final fee"
+            },
+            {
+              text: " "
+            },
+            {
+              html: '<a href="/claim-details">View</a>'
+            },
+            {
+              html: '<a href="/claim-details">View</a>'
+            }
+          ],
+          [
+            {
+              text: "Interim fee"
+            },
+            {
+              text: " "
+            },
+            {
+              text: "n/a"
+            },
+            {
+              html: '<a href="/claim-details">View</a>'
+            }
+          ],
+          [
+            {
+              text: "Transfer fee"
+            },
+            {
+              text: " "
+            },
+            {
+              text: "n/a"
+            },
+            {
+              html: '<a href="/claim-details">View</a>'
+            }
+          ],
+          [
+            {
+              text: "Warrant fee"
+            },
+            {
+              text: " "
+            },
+            {
+              html: '<a href="/claim-details">View</a>'
+            },
+            {
+              text: "n/a"
+            }
+          ],
+          [
+            {
+              text: "Supplementary fee"
+            },
+            {
+              text: " "
+            },
+            {
+              html: '<a href="/claim-details">View</a>'
+            },
+            {
+              html: '<a href="/claim-details">View</a>'
+            }
+          ]
+        ]
+      }) }}
+
+
     </div>
 </div>
 

@@ -1,0 +1,76 @@
+<h2 class="govuk-heading-m">
+  Cracked trial details
+</h2>
+
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "Notice of first fixed/warned issued"
+      },
+      value: {
+        text: "1 March 2019"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "date of notice of first fixed/warned issued"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "First fixed/warned trial"
+      },
+      value: {
+        text: "13 March 2018"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "date of first fixed/warned trial"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Date case cracked on"
+      },
+      value: {
+        html: "14 March 2018"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "when case cracked on"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Case cracked in"
+      },
+      value: {
+        html: "First third"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "which third case cracked in"
+          }
+        ]
+      }
+    }
+  ]
+}) }}

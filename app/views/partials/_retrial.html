@@ -1,0 +1,93 @@
+<h2 class="govuk-heading-m">
+  Retrial details
+</h2>
+
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "First day of retrial"
+      },
+      value: {
+        text: "1 April 2019"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "first day of trial"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Retrial concluded on"
+      },
+      value: {
+        text: "12 April 2018"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "date the retrial concluded"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Estimated retrial length"
+      },
+      value: {
+        html: "10"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "the estimated retrial length"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Actual retrial length"
+      },
+      value: {
+        html: "10"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "the actual trial length"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Apply reduced rate to retrial?"
+      },
+      value: {
+        html: "No"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "the reduced rate to retrial"
+          }
+        ]
+      }
+    }
+  ]
+}) }}

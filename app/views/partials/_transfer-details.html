@@ -1,0 +1,76 @@
+<h2 class="govuk-heading-l">
+  Transfer details
+</h2>
+
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "Litigator type"
+      },
+      value: {
+        text: "Original litigator"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "litigator type"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "When did you stop acting?"
+      },
+      value: {
+        text: "Up to an including PTPH transfer"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "when you stopped acting"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Date when you stopped acting"
+      },
+      value: {
+        html: "1 January 2019"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "the date when you stopped acting"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Was the case elected?"
+      },
+      value: {
+        html: "No"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "whether the case was elected"
+          }
+        ]
+      }
+    }
+  ]
+}) }}

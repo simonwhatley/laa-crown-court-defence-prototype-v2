@@ -1,0 +1,76 @@
+<h2 class="govuk-heading-m">
+  Trial details
+</h2>
+
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "First day of trial"
+      },
+      value: {
+        text: "1 March 2019"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "first day of trial"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Trial concluded on"
+      },
+      value: {
+        text: "14 March 2019"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "date the trial concluded"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Estimated trial length"
+      },
+      value: {
+        html: "10"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "the estimated trial length"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Actual trial length"
+      },
+      value: {
+        html: "10"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "the actual trial length"
+          }
+        ]
+      }
+    }
+  ]
+}) }}

@@ -1,0 +1,118 @@
+<h3 class="govuk-heading-m">
+  Cost summary
+</h3>
+
+{{ govukTable({
+  head: [
+    {
+      text: "Type of expense"
+    },
+    {
+      text: "Quantity",
+      format: "numeric"
+    },
+    {
+      text: "Net amount",
+      format: "numeric"
+    },
+    {
+      text: "VAT amount",
+      format: "numeric"
+    },
+    {
+      text: "Total amount",
+      format: "numeric"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Car travel"
+      },
+      {
+        text: "10",
+        format: "numeric"
+      },
+      {
+        text: "£80.00",
+        format: "numeric"
+      },
+      {
+        text: "£16.00",
+        format: "numeric"
+      },
+      {
+        text: "£96.00",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Parking"
+      },
+      {
+        text: "10",
+        format: "numeric"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "£42.00",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Subsistence"
+      },
+      {
+        text: "10",
+        format: "numeric"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "n/a",
+        format: "numeric"
+      },
+      {
+        text: "£100.19",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Travel total",
+        classes: "govuk-!-font-weight-bold"
+      },
+      {
+        text: " ",
+        format: "numeric",
+        classes: "govuk-!-font-weight-bold"
+      },
+      {
+        text: "£80.00",
+        format: "numeric",
+        classes: "govuk-!-font-weight-bold"
+      },
+      {
+        text: "£16.00",
+        format: "numeric",
+        classes: "govuk-!-font-weight-bold"
+      },
+      {
+        text: "£238.19",
+        format: "numeric",
+        classes: "govuk-!-font-weight-bold"
+      }
+    ]
+  ]
+}) }}
