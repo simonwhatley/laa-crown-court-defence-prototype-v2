@@ -1,0 +1,206 @@
+<h2 class="govuk-heading-l govuk-!-margin-top-8">
+  Messages
+</h2>
+
+{%- set messageHtml %}
+  Ut quam nunc, vulputate ac metus pharetra, posuere maximus velit. <a href="https://www.google.com">Etiam nec interdum velit.</a> Suspendisse molestie lectus in eros ornare
+{% endset -%}
+
+{%- set tableHtml %}
+{%- if data.provider_type == "advocate" %}
+
+{{ govukTable({
+  firstCellIsHeader: false,
+  head: [
+    {
+      text: "Description"
+    },
+    {
+      text: "Total authorised by LAA",
+      format: "numeric"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: (data.fee_type if data.fee_type else data.bill_type) | title + " fees"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Miscellaneous fees"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Travel expenses"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Total",
+        classes: "govuk-!-font-weight-bold"
+      },
+      {
+        text: "£0.00",
+        format: "numeric",
+        classes: "govuk-!-font-weight-bold"
+      }
+    ]
+  ]
+}) }}
+
+{% endif -%}
+
+{%- if data.provider_type == "litigator" %}
+
+{{ govukTable({
+  firstCellIsHeader: false,
+  head: [
+    {
+      text: "Description"
+    },
+    {
+      text: "Total authorised by LAA",
+      format: "numeric"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: (data.fee_type if data.fee_type else data.bill_type) | title + " fees"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Miscellaneous fees"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Disbursements"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Travel expenses"
+      },
+      {
+        text: "£0.00",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Total",
+        classes: "govuk-!-font-weight-bold"
+      },
+      {
+        text: "£0.00",
+        format: "numeric",
+        classes: "govuk-!-font-weight-bold"
+      }
+    ]
+  ]
+}) }}
+
+{% endif -%}
+{% endset -%}
+
+{%- if data.status == "assessed" %}
+
+{{ mojMessages({
+  items: [
+    {
+      id: 1,
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      type: 'sent',
+      timestamp: '2019-03-16T10:50:00.000Z',
+      sender: 'Person A'
+    },
+    {
+      id: 2,
+      text: 'Nullam vestibulum lorem vulputate velit euismod luctus.',
+      type: 'received',
+      timestamp: '2019-03-17T10:51:00.000Z',
+      sender: 'Person B'
+    },
+    {
+      id: 3,
+      text: 'Fusce et vulputate justo. Integer suscipit felis non urna lobortis, vel finibus sem tristique.',
+      type: 'sent',
+      timestamp: '2019-03-19T10:53:00.000Z',
+      sender: 'Person A'
+    },
+    {
+      id: 4,
+      text: 'Mauris tincidunt feugiat orci et convallis. Nam efficitur gravida justo non lobortis. Aliquam velit ante, lobortis eu venenatis sit amet, semper sit amet justo.',
+      type: 'sent',
+      timestamp: '2019-03-19T10:55:00.000Z',
+      sender: 'Person A'
+    },
+    {
+      id: 5,
+      text: 'Proin dapibus, nisl id ultricies ultricies, erat magna pulvinar risus, sit amet commodo nunc purus eu nulla. Aliquam erat volutpat. Vestibulum in ante interdum, elementum arcu vel, viverra nibh. Etiam ultrices urna at suscipit sollicitudin. Nulla non lectus magna. Curabitur vel vestibulum lorem. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+      type: 'received',
+      timestamp: '2019-03-21T11:56:00.000Z',
+      sender: 'Person B'
+    },
+    {
+      id: 6,
+      html: messageHtml,
+      type: 'sent',
+      timestamp: '2019-03-21T11:57:00.000Z',
+      sender: 'Person A'
+    },
+    {
+      id: 7,
+      html: tableHtml,
+      type: 'received',
+      timestamp: '2019-03-21T11:58:00.000Z',
+      sender: 'Person B'
+    }
+  ]
+}) }}
+
+{% else %}
+
+{{ mojMessages({
+  items: [
+    {
+      id: 1,
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      type: 'sent',
+      timestamp: '2019-03-16T10:50:00.000Z',
+      sender: 'Person A'
+    }
+  ]
+}) }}
+
+{% endif -%}
+
+{% include "./_message-form.html" %}

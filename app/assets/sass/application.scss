@@ -11,6 +11,7 @@ $govuk-global-styles: true;
 
 // Components that aren't in Frontend
 @import "components/cookie-banner";
+@import "components/messages";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
@@ -29,4 +30,13 @@ a.link-change {
     font-size: 16px;
     line-height: 1.25;
   }
+}
+
+.moj-message-list {
+  max-height: 400px;
+}
+
+.moj-claim-id {
+  @include govuk-font($size: 19);
+  color: govuk-colour("grey-1");
 }

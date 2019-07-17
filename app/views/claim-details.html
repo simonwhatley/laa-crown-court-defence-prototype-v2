@@ -9,6 +9,10 @@
 
 {% endblock %}
 
+{% block pageStyles %}
+
+{% endblock %}
+
 {% block beforeContent %}
 {{ govukPhaseBanner({
   tag: {
@@ -31,6 +35,8 @@
       </h1> -->
 
       {% include "./partials/_claim-overview.html" %}
+
+      {% include "./partials/_messages.html" %}
 
       {%- if data.status == "assessed" %}
         {% include "./partials/_assessment-summary.html" %}
