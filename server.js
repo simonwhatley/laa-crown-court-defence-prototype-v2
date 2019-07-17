@@ -105,6 +105,13 @@ var nunjucksAppEnv = nunjucks.configure(appViews, nunjucksConfig)
 // Add Nunjucks filters
 utils.addNunjucksFilters(nunjucksAppEnv)
 
+// Add filters from MOJ Frontend
+let mojFilters = require('./node_modules/@ministryofjustice/frontend/filters/all')();
+mojFilters = Object.assign(mojFilters);
+Object.keys(mojFilters).forEach(function (filterName) {
+  nunjucksAppEnv.addFilter(filterName, mojFilters[filterName])
+});
+
 // Set views engine
 app.set('view engine', 'html')
 
