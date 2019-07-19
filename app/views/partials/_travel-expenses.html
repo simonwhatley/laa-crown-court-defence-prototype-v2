@@ -37,7 +37,7 @@
 
 {%- set expenseType %}
 {%- if data.user_type == "caseworker" %}
-Car travel {{ mojBadge({text: 'Accepted', classes: 'moj-badge--green'}) }}
+Car travel {%- if data.provider_type == "litigator" %}{{ mojBadge({text: 'Accepted', classes: 'moj-badge--green'}) }}{% endif %}
 {% else %}
 Car travel
 {% endif -%}
