@@ -12,10 +12,6 @@
 
 {% include "./_travel-expenses-additional-information.html" %}
 
-<h3 class="govuk-heading-m">
-  Travel details
-</h3>
-
 {% set travelDetails %}
 <ul class="govuk-list">
   <li>
@@ -39,6 +35,14 @@
 </ul>
 {% endset %}
 
+{%- set expenseType %}
+{%- if data.user_type == "caseworker" %}
+Car travel {{ mojBadge({text: 'Accepted', classes: 'moj-badge--green'}) }}
+{% else %}
+Car travel
+{% endif -%}
+{% endset -%}
+
 {% set parkingDetails %}
 
 {% endset %}
@@ -53,36 +57,59 @@
 {% endset %}
 
 {{ govukTable({
+  caption: "Travel details",
+  captionClasses: "govuk-heading-m",
+  attributes: {
+    id: "travel-expenses"
+  },
   head: [
     {
-      text: "Type of expense"
+      text: "Type of expense",
+      attributes: {
+        "aria-sort": "ascending"
+      }
     },
     {
-      text: "Reason for travel"
+      text: "Reason for travel",
+      attributes: {
+        "aria-sort": "none"
+      }
     },
     {
       text: "Details"
     },
     {
-      text: "Date of expense"
+      text: "Date of expense",
+      attributes: {
+        "aria-sort": "none"
+      }
     },
     {
       text: "Net amount",
-      format: "numeric"
+      format: "numeric",
+      attributes: {
+        "aria-sort": "none"
+      }
     },
     {
       text: "VAT amount",
-      format: "numeric"
+      format: "numeric",
+      attributes: {
+        "aria-sort": "none"
+      }
     },
     {
       text: "Total amount",
-      format: "numeric"
+      format: "numeric",
+      attributes: {
+        "aria-sort": "none"
+      }
     }
   ],
   rows: [
     [
       {
-        text: "Car travel"
+        html: expenseType
       },
       {
         text: "Court hearing (Crown court)"
@@ -91,24 +118,36 @@
         html: travelDetails
       },
       {
-        text: "01/03/2019"
+        text: "01/03/2019",
+        attributes: {
+          "data-sort-value": "20190301"
+        }
       },
       {
         text: "£8.00",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "800"
+        }
       },
       {
         text: "£1.60",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "160"
+        }
       },
       {
         text: "£9.60",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "960"
+        }
       }
     ],
     [
       {
-        text: "Car travel"
+        html: expenseType
       },
       {
         text: "Court hearing (Crown court)"
@@ -117,24 +156,36 @@
         html: travelDetails
       },
       {
-        text: "04/03/2019"
+        text: "04/03/2019",
+        attributes: {
+          "data-sort-value": "20190304"
+        }
       },
       {
         text: "£8.00",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "800"
+        }
       },
       {
         text: "£1.60",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "160"
+        }
       },
       {
         text: "£9.60",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "960"
+        }
       }
     ],
     [
       {
-        text: "Car travel"
+        html: expenseType
       },
       {
         text: "Court hearing (Crown court)"
@@ -143,24 +194,36 @@
         html: travelDetails
       },
       {
-        text: "05/03/2019"
+        text: "05/03/2019",
+        attributes: {
+          "data-sort-value": "20190305"
+        }
       },
       {
         text: "£8.00",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "800"
+        }
       },
       {
         text: "£1.60",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "160"
+        }
       },
       {
         text: "£9.60",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "960"
+        }
       }
     ],
     [
       {
-        text: "Car travel"
+        html: expenseType
       },
       {
         text: "Court hearing (Crown court)"
@@ -169,24 +232,36 @@
         html: travelDetails
       },
       {
-        text: "06/03/2019"
+        text: "06/03/2019",
+        attributes: {
+          "data-sort-value": "20190306"
+        }
       },
       {
         text: "£8.00",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "800"
+        }
       },
       {
         text: "£1.60",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "160"
+        }
       },
       {
         text: "£9.60",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "960"
+        }
       }
     ],
     [
       {
-        text: "Car travel"
+        html: expenseType
       },
       {
         text: "Court hearing (Crown court)"
@@ -195,24 +270,36 @@
         html: travelDetails
       },
       {
-        text: "07/03/2019"
+        text: "07/03/2019",
+        attributes: {
+          "data-sort-value": "20190307"
+        }
       },
       {
         text: "£8.00",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "800"
+        }
       },
       {
         text: "£1.60",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "160"
+        }
       },
       {
         text: "£9.60",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "960"
+        }
       }
     ],
     [
       {
-        text: "Car travel"
+        html: expenseType
       },
       {
         text: "Court hearing (Crown court)"
@@ -221,24 +308,36 @@
         html: travelDetails
       },
       {
-        text: "08/03/2019"
+        text: "08/03/2019",
+        attributes: {
+          "data-sort-value": "20190308"
+        }
       },
       {
         text: "£8.00",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "800"
+        }
       },
       {
         text: "£1.60",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "160"
+        }
       },
       {
         text: "£9.60",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "960"
+        }
       }
     ],
     [
       {
-        text: "Car travel"
+        html: expenseType
       },
       {
         text: "Court hearing (Crown court)"
@@ -247,24 +346,36 @@
         html: travelDetails
       },
       {
-        text: "11/03/2019"
+        text: "11/03/2019",
+        attributes: {
+          "data-sort-value": "20190311"
+        }
       },
       {
         text: "£8.00",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "800"
+        }
       },
       {
         text: "£1.60",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "160"
+        }
       },
       {
         text: "£9.60",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "960"
+        }
       }
     ],
     [
       {
-        text: "Car travel"
+        html: expenseType
       },
       {
         text: "Court hearing (Crown court)"
@@ -273,24 +384,36 @@
         html: travelDetails
       },
       {
-        text: "12/03/2019"
+        text: "12/03/2019",
+        attributes: {
+          "data-sort-value": "20190312"
+        }
       },
       {
         text: "£8.00",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "800"
+        }
       },
       {
         text: "£1.60",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "160"
+        }
       },
       {
         text: "£9.60",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "960"
+        }
       }
     ],
     [
       {
-        text: "Car travel"
+        html: expenseType
       },
       {
         text: "Court hearing (Crown court)"
@@ -299,24 +422,36 @@
         html: travelDetails
       },
       {
-        text: "13/03/2019"
+        text: "13/03/2019",
+        attributes: {
+          "data-sort-value": "20190313"
+        }
       },
       {
         text: "£8.00",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "800"
+        }
       },
       {
         text: "£1.60",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "160"
+        }
       },
       {
         text: "£9.60",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "960"
+        }
       }
     ],
     [
       {
-        text: "Car travel"
+        html: expenseType
       },
       {
         text: "Court hearing (Crown court)"
@@ -325,19 +460,31 @@
         html: travelDetails
       },
       {
-        text: "14/03/2019"
+        text: "14/03/2019",
+        attributes: {
+          "data-sort-value": "20190314"
+        }
       },
       {
         text: "£8.00",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "800"
+        }
       },
       {
         text: "£1.60",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "160"
+        }
       },
       {
         text: "£9.60",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "960"
+        }
       }
     ],
     [
@@ -351,19 +498,31 @@
         html: parkingDetails
       },
       {
-        text: "01/03/2019"
+        text: "01/03/2019",
+        attributes: {
+          "data-sort-value": "20190301"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "£4.20",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "420"
+        }
       }
     ],
     [
@@ -377,19 +536,31 @@
         html: parkingDetails
       },
       {
-        text: "04/03/2019"
+        text: "04/03/2019",
+        attributes: {
+          "data-sort-value": "20190304"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "£4.20",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "420"
+        }
       }
     ],
     [
@@ -403,19 +574,31 @@
         html: parkingDetails
       },
       {
-        text: "05/03/2019"
+        text: "05/03/2019",
+        attributes: {
+          "data-sort-value": "20190305"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "£4.20",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "420"
+        }
       }
     ],
     [
@@ -429,19 +612,31 @@
         html: parkingDetails
       },
       {
-        text: "06/03/2019"
+        text: "06/03/2019",
+        attributes: {
+          "data-sort-value": "20190306"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "£4.20",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "420"
+        }
       }
     ],
     [
@@ -455,19 +650,31 @@
         html: parkingDetails
       },
       {
-        text: "07/03/2019"
+        text: "07/03/2019",
+        attributes: {
+          "data-sort-value": "20190307"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "£4.20",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "420"
+        }
       }
     ],
     [
@@ -481,19 +688,31 @@
         html: parkingDetails
       },
       {
-        text: "08/03/2019"
+        text: "08/03/2019",
+        attributes: {
+          "data-sort-value": "20190308"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "£4.20",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "420"
+        }
       }
     ],
     [
@@ -507,19 +726,31 @@
         html: parkingDetails
       },
       {
-        text: "11/03/2019"
+        text: "11/03/2019",
+        attributes: {
+          "data-sort-value": "20190311"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "£4.20",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "420"
+        }
       }
     ],
     [
@@ -533,19 +764,31 @@
         html: parkingDetails
       },
       {
-        text: "12/03/2019"
+        text: "12/03/2019",
+        attributes: {
+          "data-sort-value": "20190312"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "£4.20",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "420"
+        }
       }
     ],
     [
@@ -559,19 +802,31 @@
         html: parkingDetails
       },
       {
-        text: "13/03/2019"
+        text: "13/03/2019",
+        attributes: {
+          "data-sort-value": "20190313"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "£4.20",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "420"
+        }
       }
     ],
     [
@@ -585,19 +840,31 @@
         html: parkingDetails
       },
       {
-        text: "14/03/2019"
+        text: "14/03/2019",
+        attributes: {
+          "data-sort-value": "20190314"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "£4.20",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "420"
+        }
       }
     ],
     [
@@ -611,19 +878,31 @@
         html: subsistenceDetails
       },
       {
-        text: "01/03/2019"
+        text: "01/03/2019",
+        attributes: {
+          "data-sort-value": "20190301"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "£10.84",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "1084"
+        }
       }
     ],
     [
@@ -637,19 +916,31 @@
         html: subsistenceDetails
       },
       {
-        text: "04/03/2019"
+        text: "04/03/2019",
+        attributes: {
+          "data-sort-value": "20190304"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "£7.85",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "785"
+        }
       }
     ],
     [
@@ -663,19 +954,31 @@
         html: subsistenceDetails
       },
       {
-        text: "05/03/2019"
+        text: "05/03/2019",
+        attributes: {
+          "data-sort-value": "20190305"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "£8.59",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "859"
+        }
       }
     ],
     [
@@ -689,19 +992,31 @@
         html: subsistenceDetails
       },
       {
-        text: "06/03/2019"
+        text: "06/03/2019",
+        attributes: {
+          "data-sort-value": "20190306"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "£9.09",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "909"
+        }
       }
     ],
     [
@@ -715,19 +1030,31 @@
         html: subsistenceDetails
       },
       {
-        text: "07/03/2019"
+        text: "07/03/2019",
+        attributes: {
+          "data-sort-value": "20190307"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "£8.13",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "813"
+        }
       }
     ],
     [
@@ -741,19 +1068,31 @@
         html: subsistenceDetails
       },
       {
-        text: "08/03/2019"
+        text: "08/03/2019",
+        attributes: {
+          "data-sort-value": "20190308"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "£12.43",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "1243"
+        }
       }
     ],
     [
@@ -767,19 +1106,31 @@
         html: subsistenceDetails
       },
       {
-        text: "11/03/2019"
+        text: "11/03/2019",
+        attributes: {
+          "data-sort-value": "20190311"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "£10.08",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "1008"
+        }
       }
     ],
     [
@@ -793,19 +1144,31 @@
         html: subsistenceDetails
       },
       {
-        text: "12/03/2019"
+        text: "12/03/2019",
+        attributes: {
+          "data-sort-value": "20190312"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "£8.35",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "835"
+        }
       }
     ],
     [
@@ -819,19 +1182,31 @@
         html: subsistenceDetails
       },
       {
-        text: "13/03/2019"
+        text: "13/03/2019",
+        attributes: {
+          "data-sort-value": "20190313"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "£12.85",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "1285"
+        }
       }
     ],
     [
@@ -845,19 +1220,31 @@
         html: subsistenceDetails
       },
       {
-        text: "14/03/2019"
+        text: "14/03/2019",
+        attributes: {
+          "data-sort-value": "20190314"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "n/a",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
       },
       {
         text: "£11.98",
-        format: "numeric"
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "1198"
+        }
       }
     ]
   ]

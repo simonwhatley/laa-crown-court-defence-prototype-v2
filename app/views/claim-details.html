@@ -6,7 +6,11 @@
 {% endblock %}
 
 {% block pageScripts %}
-
+<script>
+new MOJFrontend.SortableTable({
+  table: document.getElementById('travel-expenses')
+});
+</script>
 {% endblock %}
 
 {% block pageStyles %}
@@ -30,9 +34,6 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      <!-- <h1 class="govuk-heading-xl">
-        Claim details
-      </h1> -->
 
       {% include "./partials/_claim-overview.html" %}
 
@@ -43,7 +44,13 @@
       {% endif -%}
 
       {%- if data.status == "submitted" %}
-        {% include "./partials/_cost-summary.html" %}
+
+        {%- if data.user_type == "caseworker" %}
+          {% include "./partials/_assessment-decision-form.html" %}
+        {% else %}
+          {% include "./partials/_cost-summary.html" %}
+        {% endif -%}
+
       {% endif -%}
 
       {% include "./partials/_certification.html" %}

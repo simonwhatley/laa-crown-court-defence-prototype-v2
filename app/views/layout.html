@@ -49,12 +49,11 @@
 {% endblock %}
 
 {% block pageTitle %}
-  GOV.UK Prototype Kit
+  Home – {{ serviceName }}
 {% endblock %}
 
 {% block header %}
   {% include "includes/cookie-banner.html" %}
-  {# Set serviceName in config.js. #}
   {{ govukHeader({
     homepageUrl: "/",
     serviceName: serviceName,

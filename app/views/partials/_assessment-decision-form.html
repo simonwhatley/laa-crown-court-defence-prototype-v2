@@ -1,0 +1,273 @@
+<h2 class="govuk-heading-l govuk-!-margin-top-4">
+  Assessment details
+</h2>
+
+{%- set otherHtml %}
+{{ govukInput({
+  id: "other-reason",
+  classes: "govuk-!-width-two-thirds",
+  name: "other-reason",
+  label: {
+    text: "Reason",
+    classes: "govuk-!-font-weight-bold"
+  }
+}) }}
+{% endset -%}
+
+{%- set authorisedHtml %}
+{{ govukTable({
+  head: [
+    {
+      text: "Description"
+    },
+    {
+      text: "Claimed by provider",
+      format: "numeric"
+    },
+    {
+      text: "Total authorised by LAA",
+      format: "numeric"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: (data.fee_type if data.fee_type else data.bill_type) | title + " fees"
+      },
+      {
+        text: "£100.00",
+        format: "numeric"
+      },
+      {
+        html: mojCurrencyInput({ value: "100.00", classes: "govuk-!-width-one-half" }),
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Miscellaneous fees"
+      },
+      {
+        text: "£200.00",
+        format: "numeric"
+      },
+      {
+        html: mojCurrencyInput({ value: "200.00", classes: "govuk-!-width-one-half" }),
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Travel expenses"
+      },
+      {
+        text: "£300.00",
+        format: "numeric"
+      },
+      {
+        html: mojCurrencyInput({ value: "300.00", classes: "govuk-!-width-one-half" }),
+        format: "numeric"
+      }
+    ]
+  ]
+}) }}
+{{ govukButton({
+  text: "Authorise claim"
+}) }}
+{% endset -%}
+
+{%- set partAuthorisedHtml %}
+{{ govukTable({
+  head: [
+    {
+      text: "Description"
+    },
+    {
+      text: "Claimed by provider",
+      format: "numeric"
+    },
+    {
+      text: "Total authorised by LAA",
+      format: "numeric"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: (data.fee_type if data.fee_type else data.bill_type) | title + " fees"
+      },
+      {
+        text: "£100.00",
+        format: "numeric"
+      },
+      {
+        html: mojCurrencyInput({ value: "", classes: "govuk-!-width-one-half" }),
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Miscellaneous fees"
+      },
+      {
+        text: "£200.00",
+        format: "numeric"
+      },
+      {
+        html: mojCurrencyInput({ value: "", classes: "govuk-!-width-one-half" }),
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Travel expenses"
+      },
+      {
+        text: "£300.00",
+        format: "numeric"
+      },
+      {
+        html: mojCurrencyInput({ value: "", classes: "govuk-!-width-one-half" }),
+        format: "numeric"
+      }
+    ]
+  ]
+}) }}
+{{ govukButton({
+  text: "Part authorise claim"
+}) }}
+{% endset -%}
+
+{%- set refusedHtml %}
+{{ govukCheckboxes({
+  idPrefix: "refuse-claim",
+  name: "refuse-claim",
+  fieldset: {
+    legend: {
+      text: "Reason for refusal",
+      classes: "govuk-fieldset__legend--s"
+    }
+  },
+  hint: {
+    text: "Please choose all relevant options"
+  },
+  items: [
+    {
+      text: "Duplicate claim",
+      value: "duplicate"
+    },
+    {
+      text: "Other",
+      value: "other",
+      conditional: {
+        html: otherHtml
+      }
+    }
+  ]
+}) }}
+{{ govukButton({
+  text: "Refuse claim"
+}) }}
+{% endset -%}
+
+
+{%- set rejectedHtml %}
+{{ govukCheckboxes({
+  idPrefix: "reject-claim",
+  name: "reject-claim",
+  fieldset: {
+    legend: {
+      text: "Reason for rejection",
+      classes: "govuk-fieldset__legend--s"
+    }
+  },
+  hint: {
+    text: "Please choose all relevant options"
+  },
+  items: [
+    {
+      text: "No indictment attached",
+      value: "no-indictment-attached"
+    },
+    {
+      text: "No Magistrates’ representation order attached (granted before 1/8/2015)",
+      value: "no-magistrates-representation-order-attached"
+    },
+    {
+      text: "Claim significantly out of time with no explanation",
+      value: "claim-significantly-out-of-time-with-no-explanation"
+    },
+    {
+      text: "No amending representation order",
+      value: "no-amending-representation-order"
+    },
+    {
+      text: "Case still live",
+      value: "case-still-live"
+    },
+    {
+      text: "Incorrect case number",
+      value: "incorrect-case-number"
+    },
+    {
+      text: "Wrong MAAT reference",
+      value: "wrong-maat-reference"
+    },
+    {
+      text: "Other",
+      value: "other",
+      conditional: {
+        html: otherHtml
+      }
+    }
+  ]
+}) }}
+{{ govukButton({
+  text: "Reject claim"
+}) }}
+{% endset -%}
+
+
+{{ govukRadios({
+  idPrefix: "assessment-decision",
+  name: "assessment-decision",
+  fieldset: {
+    legend: {
+      text: "Assessment decision",
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  hint: {
+    text: "Lorem ipsum"
+  },
+  items: [
+    {
+      text: "Authorised",
+      value: "authorised",
+      conditional: {
+        html: authorisedHtml
+      }
+    },
+    {
+      text: "Part authorised",
+      value: "part-authorised",
+      conditional: {
+        html: partAuthorisedHtml
+      }
+    },
+    {
+      text: "Refused",
+      value: "refused",
+      conditional: {
+        html: refusedHtml
+      }
+    },
+    {
+      text: "Rejected",
+      value: "rejected",
+      conditional: {
+        html: rejectedHtml
+      }
+    }
+  ]
+}) }}
