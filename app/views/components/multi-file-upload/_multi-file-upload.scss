@@ -7,7 +7,7 @@
 }
 
 .dropzone-enhanced {
-  outline: 2px dashed #777;
+  outline: 2px dashed govuk-colour("grey-1");
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -68,7 +68,7 @@
   float: left;
   width: 80px;
   margin-right: $spacing-scale-2;
-  @include mq($from: md) {
+  @include govuk-media-query($from: md) {
     width: 160px;
   }
   white-space: nowrap;
@@ -84,7 +84,7 @@
   margin-right: $spacing-scale-2;
   overflow: hidden;
   text-overflow: ellipsis;
-  @include mq($from: md) {
+  @include govuk-media-query($from: md) {
     width: 300px;
   }
 }
@@ -104,7 +104,7 @@
   margin-right: $spacing-scale-2;
   overflow: hidden;
   text-overflow: ellipsis;
-  @include mq($from: md) {
+  @include govuk-media-query($from: md) {
     width: 300px;
   }
 }
@@ -131,7 +131,7 @@
   @include secondaryButton;
   font-size: 1.2em;
   background-color: #ddd;
-  color: $colour-black;
+  color: govuk-colour("black");
   font-weight: normal;
   // border-color: #bbb;
 }
@@ -142,5 +142,5 @@
 
 .dropzone-focused {
   outline: none;
-  box-shadow: 0 0 1px 4px $colour-yellow;
+  box-shadow: 0 0 1px 4px govuk-colour("yellow");
 }
