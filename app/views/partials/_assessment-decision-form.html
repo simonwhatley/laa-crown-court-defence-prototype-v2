@@ -15,6 +15,7 @@
 {% endset -%}
 
 {%- set authorisedHtml %}
+{%- if data.provider_type == "advocate" %}
 {{ govukTable({
   head: [
     {
@@ -68,15 +69,170 @@
         html: mojCurrencyInput({ value: "300.00", classes: "govuk-!-width-one-half" }),
         format: "numeric"
       }
+    ],
+    [
+      {
+        text: "Net amount",
+        classes: "govuk-!-font-weight-bold"
+      },
+      {
+        text: "£600.00",
+        format: "numeric"
+      },
+      {
+        html: mojCurrencyInput({ value: "600.00", classes: "govuk-!-width-one-half" }),
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "VAT amount (20%)"
+      },
+      {
+        text: "£120.00",
+        format: "numeric"
+      },
+      {
+        html: mojCurrencyInput({ value: "120.00", classes: "govuk-!-width-one-half" }),
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Total amount",
+        classes: "govuk-!-font-weight-bold"
+      },
+      {
+        text: "£720.00",
+        format: "numeric"
+      },
+      {
+        html: mojCurrencyInput({ value: "720.00", classes: "govuk-!-width-one-half" }),
+        format: "numeric"
+      }
     ]
   ]
 }) }}
+{% endif %}
+{%- if data.provider_type == "litigator" %}
+{{ govukTable({
+  head: [
+    {
+      text: "Description"
+    },
+    {
+      text: "Claimed by provider",
+      format: "numeric"
+    },
+    {
+      text: "Total authorised by LAA",
+      format: "numeric"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: (data.fee_type if data.fee_type else data.bill_type) | title + " fees"
+      },
+      {
+        text: "£100.00",
+        format: "numeric"
+      },
+      {
+        html: mojCurrencyInput({ value: "100.00", classes: "govuk-!-width-one-half" }),
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Disbursements"
+      },
+      {
+        text: "£200.00",
+        format: "numeric"
+      },
+      {
+        html: mojCurrencyInput({ value: "200.00", classes: "govuk-!-width-one-half" }),
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Miscellaneous fees"
+      },
+      {
+        text: "£300.00",
+        format: "numeric"
+      },
+      {
+        html: mojCurrencyInput({ value: "300.00", classes: "govuk-!-width-one-half" }),
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Travel expenses"
+      },
+      {
+        text: "£400.00",
+        format: "numeric"
+      },
+      {
+        html: mojCurrencyInput({ value: "400.00", classes: "govuk-!-width-one-half" }),
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Net amount",
+        classes: "govuk-!-font-weight-bold"
+      },
+      {
+        text: "£1,000.00",
+        format: "numeric"
+      },
+      {
+        html: mojCurrencyInput({ value: "1000.00", classes: "govuk-!-width-one-half" }),
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "VAT amount (20%)"
+      },
+      {
+        text: "£200.00",
+        format: "numeric"
+      },
+      {
+        html: mojCurrencyInput({ value: "200.00", classes: "govuk-!-width-one-half" }),
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Total amount",
+        classes: "govuk-!-font-weight-bold"
+      },
+      {
+        text: "£1,200.00",
+        format: "numeric"
+      },
+      {
+        html: mojCurrencyInput({ value: "1200.00", classes: "govuk-!-width-one-half" }),
+        format: "numeric"
+      }
+    ]
+  ]
+}) }}
+{% endif %}
 {{ govukButton({
   text: "Authorise claim"
 }) }}
 {% endset -%}
 
 {%- set partAuthorisedHtml %}
+{%- if data.provider_type == "advocate" %}
 {{ govukTable({
   head: [
     {
@@ -130,9 +286,163 @@
         html: mojCurrencyInput({ value: "", classes: "govuk-!-width-one-half" }),
         format: "numeric"
       }
+    ],
+    [
+      {
+        text: "Net amount",
+        classes: "govuk-!-font-weight-bold"
+      },
+      {
+        text: "£600.00",
+        format: "numeric"
+      },
+      {
+        html: mojCurrencyInput({ value: "", classes: "govuk-!-width-one-half" }),
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "VAT amount (20%)"
+      },
+      {
+        text: "£120.00",
+        format: "numeric"
+      },
+      {
+        html: mojCurrencyInput({ value: "", classes: "govuk-!-width-one-half" }),
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Total amount",
+        classes: "govuk-!-font-weight-bold"
+      },
+      {
+        text: "£720.00",
+        format: "numeric"
+      },
+      {
+        html: mojCurrencyInput({ value: "", classes: "govuk-!-width-one-half" }),
+        format: "numeric"
+      }
     ]
   ]
 }) }}
+{% endif %}
+{%- if data.provider_type == "litigator" %}
+{{ govukTable({
+  head: [
+    {
+      text: "Description"
+    },
+    {
+      text: "Claimed by provider",
+      format: "numeric"
+    },
+    {
+      text: "Total authorised by LAA",
+      format: "numeric"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: (data.fee_type if data.fee_type else data.bill_type) | title + " fees"
+      },
+      {
+        text: "£100.00",
+        format: "numeric"
+      },
+      {
+        html: mojCurrencyInput({ value: "", classes: "govuk-!-width-one-half" }),
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Disbursements"
+      },
+      {
+        text: "£200.00",
+        format: "numeric"
+      },
+      {
+        html: mojCurrencyInput({ value: "", classes: "govuk-!-width-one-half" }),
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Miscellaneous fees"
+      },
+      {
+        text: "£300.00",
+        format: "numeric"
+      },
+      {
+        html: mojCurrencyInput({ value: "", classes: "govuk-!-width-one-half" }),
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Travel expenses"
+      },
+      {
+        text: "£300.00",
+        format: "numeric"
+      },
+      {
+        html: mojCurrencyInput({ value: "", classes: "govuk-!-width-one-half" }),
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Net amount",
+        classes: "govuk-!-font-weight-bold"
+      },
+      {
+        text: "£1,000.00",
+        format: "numeric"
+      },
+      {
+        html: mojCurrencyInput({ value: "", classes: "govuk-!-width-one-half" }),
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "VAT amount (20%)"
+      },
+      {
+        text: "£200.00",
+        format: "numeric"
+      },
+      {
+        html: mojCurrencyInput({ value: "", classes: "govuk-!-width-one-half" }),
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Total amount",
+        classes: "govuk-!-font-weight-bold"
+      },
+      {
+        text: "£1,200.00",
+        format: "numeric"
+      },
+      {
+        html: mojCurrencyInput({ value: "", classes: "govuk-!-width-one-half" }),
+        format: "numeric"
+      }
+    ]
+  ]
+}) }}
+{% endif %}
 {{ govukButton({
   text: "Part authorise claim"
 }) }}
