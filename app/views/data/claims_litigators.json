@@ -1,0 +1,1585 @@
+[
+    {
+        "id": 61807,
+        "bill_type": "litigator_final",
+        "fee_scheme": "LGFS",
+        "fee_scheme_version": 9,
+        "status": "draft",
+        "supplier_number": "5A000Z",
+        "reference_number": "HR/PS/72852849",
+        "case_type": "trial",
+        "fee_type": "graduated",
+        "court": "central_criminal_court",
+        "case_number": "T20180101",
+        "totals": {
+            "claimed": {
+                "fees": 0.00,
+                "miscellaneous_fees": 0.00,
+                "expenses": 0.00,
+                "net_amount": 0.00,
+                "vat_amount": 0.00,
+                "gross_amount": 0.00
+            },
+            "assessed": {
+                "fees": 0.00,
+                "miscellaneous_fees": 0.00,
+                "expenses": 0.00,
+                "net_amount": 0.00,
+                "vat_amount": 0.00,
+                "gross_amount": 0.00
+            }
+        },
+        "dates": {
+            "submitted": "",
+            "assessed": ""
+        },
+        "messages": [],
+        "defendants": [
+            {
+                "first_name": "Philippine",
+                "last_name": "Struttman",
+                "date_of_birth": "1973-06-05T00:00:00.000Z",
+                "judicial_apportionment": "yes",
+                "representation_orders": [
+                    {
+                        "representation_order_date": "2017-09-24T00:00:00.000Z",
+                        "maat_reference": 72852849
+                    }
+                ]
+            }
+        ],
+        "offence_details": {
+            "offence_class": "",
+            "offence_category": ""
+        },
+        "fees": [],
+        "miscellaneous_fees": [],
+        "disbursements": [],
+        "expenses": [],
+        "supporting_evidence": [],
+        "additional_information": "",
+        "certification": {
+            "certified_by": "Rosalind Pendleberry",
+            "certified_date": "2018-03-30T12:00:00.000Z"
+        }
+    },
+    {
+        "id": 66624,
+        "bill_type": "litigator_final",
+        "fee_scheme": "LGFS",
+        "fee_scheme_version": 9,
+        "status": "draft",
+        "supplier_number": "6B111Y",
+        "reference_number": "HW/KY/44332721",
+        "case_type": "appeal_against_conviction",
+        "fee_type": "fixed",
+        "court": "snaresbrook",
+        "case_number": "A20180102",
+        "totals": {
+            "claimed": {
+                "fees": 0.00,
+                "miscellaneous_fees": 0.00,
+                "expenses": 0.00,
+                "net_amount": 0.00,
+                "vat_amount": 0.00,
+                "gross_amount": 0.00
+            },
+            "assessed": {
+                "fees": 0.00,
+                "miscellaneous_fees": 0.00,
+                "expenses": 0.00,
+                "net_amount": 0.00,
+                "vat_amount": 0.00,
+                "gross_amount": 0.00
+            }
+        },
+        "dates": {
+            "submitted": "",
+            "assessed": ""
+        },
+        "messages": [],
+        "defendants": [
+            {
+                "first_name": "Katina",
+                "last_name": "Yerrall",
+                "date_of_birth": "1967-09-08T00:00:00.000Z",
+                "judicial_apportionment": "yes",
+                "representation_orders": [
+                    {
+                        "representation_order_date": "2017-05-28T00:00:00.000Z",
+                        "maat_reference": 44332721
+                    }
+                ]
+            }
+        ],
+        "offence_details": {
+            "offence_class": "",
+            "offence_category": ""
+        },
+        "fees": [],
+        "miscellaneous_fees": [],
+        "disbursements": [],
+        "expenses": [],
+        "supporting_evidence": [],
+        "additional_information": "",
+        "certification": {
+            "certified_by": "Rosalind Pendleberry",
+            "certified_date": "2018-03-30T12:00:00.000Z"
+        }
+    },
+    {
+        "id": 73160,
+        "bill_type": "litigator_final",
+        "fee_scheme": "LGFS",
+        "fee_scheme_version": 9,
+        "status": "submitted",
+        "supplier_number": "7C222X",
+        "reference_number": "GF/LT/75674990",
+        "case_type": "retrial",
+        "fee_type": "graduated",
+        "court": "inner_london",
+        "case_number": "T20180103",
+        "totals": {
+            "claimed": {
+                "fees": 0.00,
+                "miscellaneous_fees": 0.00,
+                "expenses": 0.00,
+                "net_amount": 0.00,
+                "vat_amount": 0.00,
+                "gross_amount": 0.00
+            },
+            "assessed": {
+                "fees": 0.00,
+                "miscellaneous_fees": 0.00,
+                "expenses": 0.00,
+                "net_amount": 0.00,
+                "vat_amount": 0.00,
+                "gross_amount": 0.00
+            }
+        },
+        "dates": {
+            "submitted": "2018-03-28T09:50:00.000Z",
+            "assessed": ""
+        },
+        "messages": [
+            {
+                "message_id": 95349,
+                "timestamp": "2018-03-28T09:50:00.000Z",
+                "message": "Your claim has been submitted",
+                "user_id": 1,
+                "user_name": "System",
+                "type": "system"
+            }
+        ],
+        "defendants": [
+            {
+                "first_name": "Louisa",
+                "last_name": "Toop",
+                "date_of_birth": "1975-09-16T00:00:00.000Z",
+                "judicial_apportionment": "yes",
+                "representation_orders": [
+                    {
+                        "representation_order_date": "2017-12-08T00:00:00.000Z",
+                        "maat_reference": 75674990
+                    }
+                ]
+            }
+        ],
+        "offence_details": {
+            "offence_class": "",
+            "offence_category": ""
+        },
+        "fees": [],
+        "miscellaneous_fees": [],
+        "disbursements": [],
+        "expenses": [],
+        "supporting_evidence": [],
+        "additional_information": "",
+        "certification": {
+            "certified_by": "Rosalind Pendleberry",
+            "certified_date": "2018-03-30T12:00:00.000Z"
+        }
+    },
+    {
+        "id": 77501,
+        "bill_type": "litigator_final",
+        "fee_scheme": "LGFS",
+        "fee_scheme_version": 9,
+        "status": "submitted",
+        "supplier_number": "8D333W",
+        "reference_number": "SB/AN/42935618",
+        "case_type": "appeal_against_sentence",
+        "fee_type": "fixed",
+        "court": "central_criminal_court",
+        "case_number": "A20180104",
+        "totals": {
+            "claimed": {
+                "fees": 50.00,
+                "miscellaneous_fees": 30.00,
+                "expenses": 20.00,
+                "net_amount": 100.00,
+                "vat_amount": 20.00,
+                "gross_amount": 120.00
+            },
+            "assessed": {
+                "fees": 0.00,
+                "miscellaneous_fees": 0.00,
+                "expenses": 0.00,
+                "net_amount": 0.00,
+                "vat_amount": 0.00,
+                "gross_amount": 0.00
+            }
+        },
+        "dates": {
+            "submitted": "2018-03-28T10:50:00.000Z",
+            "assessed": ""
+        },
+        "messages": [
+            {
+                "message_id": 81355,
+                "timestamp": "2018-03-28T10:50:00.000Z",
+                "message": "Your claim has been submitted",
+                "user_id": 1,
+                "user_name": "System",
+                "type": "system"
+            }
+        ],
+        "defendants": [
+            {
+                "first_name": "Ardelia",
+                "last_name": "Nappin",
+                "date_of_birth": "1978-06-13T00:00:00.000Z",
+                "judicial_apportionment": "no",
+                "representation_orders": [
+                    {
+                        "representation_order_date": "2017-06-08T00:00:00.000Z",
+                        "maat_reference": 42935618
+                    }
+                ]
+            }
+        ],
+        "offence_details": {
+            "offence_class": "",
+            "offence_category": ""
+        },
+        "fees": [],
+        "miscellaneous_fees": [],
+        "disbursements": [],
+        "expenses": [],
+        "supporting_evidence": [],
+        "additional_information": "",
+        "certification": {
+            "certified_by": "Rosalind Pendleberry",
+            "certified_date": "2018-03-30T12:00:00.000Z"
+        }
+    },
+    {
+        "id": 84915,
+        "bill_type": "litigator_final",
+        "fee_scheme": "LGFS",
+        "fee_scheme_version": 9,
+        "status": "allocated",
+        "supplier_number": "9E444V",
+        "reference_number": "PT/LF/27627162",
+        "case_type": "cracked_before_retrial",
+        "fee_type": "graduated",
+        "court": "snaresbrook",
+        "case_number": "T20180105",
+        "totals": {
+            "claimed": {
+                "fees": 0.00,
+                "miscellaneous_fees": 0.00,
+                "expenses": 0.00,
+                "net_amount": 0.00,
+                "vat_amount": 0.00,
+                "gross_amount": 0.00
+            },
+            "assessed": {
+                "fees": 0.00,
+                "miscellaneous_fees": 0.00,
+                "expenses": 0.00,
+                "net_amount": 0.00,
+                "vat_amount": 0.00,
+                "gross_amount": 0.00
+            }
+        },
+        "dates": {
+            "submitted": "2018-03-29T09:30:00.000Z",
+            "assessed": ""
+        },
+        "messages": [
+            {
+                "message_id": 61347,
+                "timestamp": "2018-03-29T10:50:00.000Z",
+                "message": "Your claim has been submitted",
+                "user_id": 1,
+                "user_name": "System",
+                "type": "system"
+            },
+            {
+                "message_id": 69230,
+                "timestamp": "2018-03-29T10:53:00.000Z",
+                "message": "Your claim has been allocated",
+                "user_id": 1,
+                "user_name": "System",
+                "type": "system"
+            }
+        ],
+        "defendants": [
+            {
+                "first_name": "Lyman",
+                "last_name": "Firle",
+                "date_of_birth": "1989-06-28T00:00:00.000Z",
+                "judicial_apportionment": "no",
+                "representation_orders": [
+                    {
+                        "representation_order_date": "2017-09-05T00:00:00.000Z",
+                        "maat_reference": 27627162
+                    }
+                ]
+            }
+        ],
+        "offence_details": {
+            "offence_class": "",
+            "offence_category": ""
+        },
+        "fees": [],
+        "miscellaneous_fees": [],
+        "disbursements": [],
+        "expenses": [],
+        "supporting_evidence": [],
+        "additional_information": "",
+        "certification": {
+            "certified_by": "Rosalind Pendleberry",
+            "certified_date": "2018-03-30T12:00:00.000Z"
+        }
+    },
+    {
+        "id": 91001,
+        "bill_type": "litigator_final",
+        "fee_scheme": "LGFS",
+        "fee_scheme_version": 9,
+        "status": "allocated",
+        "supplier_number": "5A000Z",
+        "reference_number": "CEB/SJ/66637216",
+        "case_type": "breach_of_crown_court_order",
+        "fee_type": "fixed",
+        "court": "inner_london",
+        "case_number": "T20180106",
+        "totals": {
+            "claimed": {
+                "fees": 0.00,
+                "miscellaneous_fees": 0.00,
+                "expenses": 0.00,
+                "net_amount": 0.00,
+                "vat_amount": 0.00,
+                "gross_amount": 0.00
+            },
+            "assessed": {
+                "fees": 0.00,
+                "miscellaneous_fees": 0.00,
+                "expenses": 0.00,
+                "net_amount": 0.00,
+                "vat_amount": 0.00,
+                "gross_amount": 0.00
+            }
+        },
+        "dates": {
+            "submitted": "2018-03-29T09:30:00.000Z",
+            "assessed": "",
+            "reason": "I attended the main hearing (1st day of trial)"
+        },
+        "messages": [
+            {
+                "message_id": 61347,
+                "timestamp": "2018-03-29T10:50:00.000Z",
+                "message": "Your claim has been submitted",
+                "user_id": 1,
+                "user_name": "System",
+                "type": "system"
+            },
+            {
+                "message_id": 69230,
+                "timestamp": "2018-03-29T10:53:00.000Z",
+                "message": "Your claim has been allocated",
+                "user_id": 1,
+                "user_name": "System",
+                "type": "system"
+            },
+            {
+                "message_id": 73900,
+                "timestamp": "2018-03-29T11:22:00.000Z",
+                "message": "Your claim has been de-allocated",
+                "user_id": 1,
+                "user_name": "System",
+                "type": "system"
+            },
+            {
+                "message_id": 78632,
+                "timestamp": "2018-03-30T10:30:00.000Z",
+                "message": "Your claim has been allocated",
+                "user_id": 1,
+                "user_name": "System",
+                "type": "system"
+            }
+        ],
+        "defendants": [
+            {
+                "first_name": "Sheryl",
+                "last_name": "Jackling",
+                "date_of_birth": "1981-11-29T00:00:00.000Z",
+                "judicial_apportionment": "yes",
+                "representation_orders": [
+                    {
+                        "representation_order_date": "2018-03-04T00:00:00.000Z",
+                        "maat_reference": 66637216
+                    }
+                ]
+            }
+        ],
+        "offence_details": {
+            "offence_class": "",
+            "offence_category": ""
+        },
+        "fees": [],
+        "miscellaneous_fees": [],
+        "disbursements": [],
+        "expenses": [],
+        "supporting_evidence": [],
+        "additional_information": "",
+        "certification": {
+            "certified_by": "Rosalind Pendleberry",
+            "certified_date": "2018-03-30T12:00:00.000Z"
+        }
+    },
+    {
+        "id": 93069,
+        "bill_type": "litigator_final",
+        "fee_scheme": "LGFS",
+        "fee_scheme_version": 9,
+        "status": "authorised",
+        "supplier_number": "6B111Y",
+        "reference_number": "GF/KM/65063864",
+        "case_type": "guilty_plea",
+        "fee_type": "graduated",
+        "court": "central_criminal_court",
+        "case_number": "T20180107",
+        "totals": {
+            "claimed": {
+                "fees": 0.00,
+                "miscellaneous_fees": 0.00,
+                "expenses": 0.00,
+                "net_amount": 0.00,
+                "vat_amount": 0.00,
+                "gross_amount": 0.00
+            },
+            "assessed": {
+                "fees": 0.00,
+                "miscellaneous_fees": 0.00,
+                "expenses": 0.00,
+                "net_amount": 0.00,
+                "vat_amount": 0.00,
+                "gross_amount": 0.00
+            }
+        },
+        "dates": {
+            "submitted": "2018-03-29T09:30:00.000Z",
+            "assessed": "2018-04-05T11:56:00.000Z"
+        },
+        "messages": [
+            {
+                "message_id": 31637,
+                "timestamp": "2018-03-29T10:50:00.000Z",
+                "message": "Your claim has been submitted",
+                "user_id": 1,
+                "user_name": "System",
+                "type": "system"
+            },
+            {
+                "message_id": 40606,
+                "timestamp": "2018-04-05T11:56:00.000Z",
+                "message": "Your claim has been allocated",
+                "user_id": 1,
+                "user_name": "System",
+                "type": "system"
+            },
+            {
+                "message_id": 43723,
+                "timestamp": "2018-04-05T11:56:00.000Z",
+                "message": "Your claim has been authorised",
+                "user_id": 1,
+                "user_name": "System",
+                "type": "system"
+            },
+            {
+                "message_id": 50733,
+                "timestamp": "2018-04-05T11:56:00.000Z",
+                "message": "Assessment made\n\n<table><thead><tr><th>&nbsp;</th><th scope='col'>Amount</th></tr></thead><tbody><tr><td scope='row' class='bold'>Fees</td><td>£0.00</td></tr><tr><td scope='row' class='bold'>Miscellaneous fees</td><td>£0.00</td></tr><tr><td scope='row' class='bold'>Travel expenses</td><td>£0.00</td></tr><tr><td scope='row' class='bold'>Net amount</td><td>£0.00</td></tr><tr><td scope='row' class='bold'>VAT (20%)</td><td>£0.00</td></tr><tr><td scope='row' class='bold'>Gross amount</td><td>£0.00</td></tr></tbody></table>",
+                "user_id": 1,
+                "user_name": "System",
+                "type": "system"
+            }
+        ],
+        "defendants": [
+            {
+                "first_name": "Kelsey",
+                "last_name": "McTerlagh",
+                "date_of_birth": "1988-10-31T00:00:00.000Z",
+                "judicial_apportionment": "yes",
+                "representation_orders": [
+                    {
+                        "representation_order_date": "2018-02-21T00:00:00.000Z",
+                        "maat_reference": 65063864
+                    }
+                ]
+            }
+        ],
+        "offence_details": {
+            "offence_class": "",
+            "offence_category": ""
+        },
+        "fees": [],
+        "miscellaneous_fees": [],
+        "disbursements": [],
+        "expenses": [],
+        "supporting_evidence": [],
+        "additional_information": "",
+        "certification": {
+            "certified_by": "Rosalind Pendleberry",
+            "certified_date": "2018-03-30T12:00:00.000Z"
+        }
+    },
+    {
+        "id": 97631,
+        "bill_type": "litigator_final",
+        "fee_scheme": "LGFS",
+        "fee_scheme_version": 9,
+        "status": "authorised",
+        "supplier_number": "7C222X",
+        "reference_number": "PH/AT/67772268",
+        "case_type": "committal_for_sentence",
+        "fee_type": "fixed",
+        "court": "snaresbrook",
+        "case_number": "T20180108",
+        "totals": {
+            "claimed": {
+                "fees": 0.00,
+                "miscellaneous_fees": 0.00,
+                "expenses": 0.00,
+                "net_amount": 0.00,
+                "vat_amount": 0.00,
+                "gross_amount": 0.00
+            },
+            "assessed": {
+                "fees": 0.00,
+                "miscellaneous_fees": 0.00,
+                "expenses": 0.00,
+                "net_amount": 0.00,
+                "vat_amount": 0.00,
+                "gross_amount": 0.00
+            }
+        },
+        "dates": {
+            "submitted": "2018-03-29T09:30:00.000Z",
+            "assessed": "2018-04-03T09:56:00.000Z"
+        },
+        "messages": [
+            {
+                "message_id": 81355,
+                "timestamp": "2018-03-29T09:30:00.000Z",
+                "message": "Your claim has been submitted",
+                "user_id": 1,
+                "user_name": "System",
+                "type": "system"
+            },
+            {
+                "message_id": 87605,
+                "timestamp": "2018-03-29T10:51:00.000Z",
+                "message": "I forgot to attach filename\n\nAttachment: <a href='#noop'>DefendantName_T12345678-Indictment.pdf</a> (23.1 KB)",
+                "user_id": 3,
+                "user_name": "Rosalind Pendleberry",
+                "type": "provider"
+            },
+            {
+                "message_id": 92327,
+                "timestamp": "2018-03-30T10:53:00.000Z",
+                "message": "Your claim has been allocated",
+                "user_id": 1,
+                "user_name": "System",
+                "type": "system"
+            },
+            {
+                "message_id": 98961,
+                "timestamp": "2018-03-30T10:55:00.000Z",
+                "message": "Okay great. We'll use the file in our assessment of the claim",
+                "user_id": 2,
+                "user_name": "Caseworker",
+                "type": "caseworker"
+            },
+            {
+                "message_id": 114983,
+                "timestamp": "2018-03-31T11:55:00.000Z",
+                "message": "You requested redetermination",
+                "user_id": 3,
+                "user_name": "Rosalind Pendleberry",
+                "type": "provider"
+            },
+            {
+                "message_id": 107190,
+                "timestamp": "2018-03-31T11:56:00.000Z",
+                "message": "Please consider new offence information\n\nAttachment: <a href='#noop'>Screen_Shot_2017-10-17_at_15.21.45.png</a> (337 KB)",
+                "user_id": 3,
+                "user_name": "Rosalind Pendleberry",
+                "type": "provider"
+            },
+            {
+                "message_id": 118365,
+                "timestamp": "2018-04-02T11:56:00.000Z",
+                "message": "Your claim has been allocated",
+                "user_id": 1,
+                "user_name": "System",
+                "type": "system"
+            },
+            {
+                "message_id": 121179,
+                "timestamp": "2018-04-03T09:54:00.000Z",
+                "message": "Assessment made\n\n<table><thead><tr><th>&nbsp;</th><th scope='col'>Amount</th></tr></thead><tbody><tr><td scope='row' class='bold'>Fees</td><td>£0.00</td></tr><tr><td scope='row' class='bold'>Miscellaneous fees</td><td>£0.00</td></tr><tr><td scope='row' class='bold'>Travel expenses</td><td>£0.00</td></tr><tr><td scope='row' class='bold'>Net amount</td><td>£0.00</td></tr><tr><td scope='row' class='bold'>VAT (20%)</td><td>£0.00</td></tr><tr><td scope='row' class='bold'>Gross amount</td><td>£0.00</td></tr></tbody></table>",
+                "user_id": 1,
+                "user_name": "System",
+                "type": "system"
+
+            },
+            {
+                "message_id": 121199,
+                "timestamp": "2018-04-03T09:56:00.000Z",
+                "message": "Your claim has been authorised",
+                "user_id": 1,
+                "user_name": "System",
+                "type": "system"
+            },
+            {
+                "message_id": 130335,
+                "timestamp": "2018-04-03T10:05:00.000Z",
+                "message": "Paid as claimed",
+                "user_id": 2,
+                "user_name": "Caseworker",
+                "type": "caseworker"
+            }
+        ],
+        "defendants": [
+            {
+                "first_name": "Alexis",
+                "last_name": "Thorbon",
+                "date_of_birth": "1992-09-30T00:00:00.000Z",
+                "judicial_apportionment": "yes",
+                "representation_orders": [
+                    {
+                        "representation_order_date": "2017-12-02T00:00:00.000Z",
+                        "maat_reference": 67772268
+                    }
+                ]
+            }
+        ],
+        "offence_details": {
+            "offence_class": "",
+            "offence_category": ""
+        },
+        "fees": [],
+        "miscellaneous_fees": [],
+        "disbursements": [],
+        "expenses": [],
+        "supporting_evidence": [],
+        "additional_information": "",
+        "certification": {
+            "certified_by": "Rosalind Pendleberry",
+            "certified_date": "2018-03-30T12:00:00.000Z"
+        }
+    },
+    {
+        "id": 99362,
+        "bill_type": "litigator_final",
+        "fee_scheme": "LGFS",
+        "fee_scheme_version": 9,
+        "status": "part_authorised",
+        "supplier_number": "8D333W",
+        "reference_number": "FA/TL/69142753",
+        "case_type": "trial",
+        "fee_type": "graduated",
+        "court": "inner_london",
+        "case_number": "T20180109",
+        "totals": {
+            "claimed": {
+                "fees": 0.00,
+                "miscellaneous_fees": 0.00,
+                "expenses": 0.00,
+                "net_amount": 0.00,
+                "vat_amount": 0.00,
+                "gross_amount": 0.00
+            },
+            "assessed": {
+                "fees": 0.00,
+                "miscellaneous_fees": 0.00,
+                "expenses": 0.00,
+                "net_amount": 0.00,
+                "vat_amount": 0.00,
+                "gross_amount": 0.00
+            }
+        },
+        "dates": {
+            "submitted": "2018-03-29T09:30:00.000Z",
+            "assessed": "2018-04-05T11:56:00.000Z"
+        },
+        "messages": [
+            {
+                "message_id": 31637,
+                "timestamp": "2018-03-29T10:50:00.000Z",
+                "message": "Your claim has been submitted",
+                "user_id": 1,
+                "user_name": "System",
+                "type": "system"
+            },
+            {
+                "message_id": 40606,
+                "timestamp": "2018-04-05T11:56:00.000Z",
+                "message": "Your claim has been allocated",
+                "user_id": 1,
+                "user_name": "System",
+                "type": "system"
+            },
+            {
+                "message_id": 43723,
+                "timestamp": "2018-04-05T11:56:00.000Z",
+                "message": "Your claim has been part-authorised",
+                "user_id": 1,
+                "user_name": "System",
+                "type": "system"
+            },
+            {
+                "message_id": 50733,
+                "timestamp": "2018-04-05T11:56:00.000Z",
+                "message": "Assessment made\n\n<table><thead><tr><th>&nbsp;</th><th scope='col'>Amount</th></tr></thead><tbody><tr><td scope='row' class='bold'>Fees</td><td>£0.00</td></tr><tr><td scope='row' class='bold'>Miscellaneous fees</td><td>£0.00</td></tr><tr><td scope='row' class='bold'>Travel expenses</td><td>£0.00</td></tr><tr><td scope='row' class='bold'>Net amount</td><td>£0.00</td></tr><tr><td scope='row' class='bold'>VAT (20%)</td><td>£0.00</td></tr><tr><td scope='row' class='bold'>Gross amount</td><td>£0.00</td></tr></tbody></table>",
+                "user_id": 1,
+                "user_name": "System",
+                "type": "system"
+            }
+        ],
+        "defendants": [
+            {
+                "first_name": "Tabby",
+                "last_name": "Lynds",
+                "date_of_birth": "1988-02-06T00:00:00.000Z",
+                "judicial_apportionment": "yes",
+                "representation_orders": [
+                    {
+                        "representation_order_date": "2017-03-15T00:00:00.000Z",
+                        "maat_reference": 69142753
+                    }
+                ]
+            }
+        ],
+        "offence_details": {
+            "offence_class": "",
+            "offence_category": ""
+        },
+        "fees": [],
+        "miscellaneous_fees": [],
+        "disbursements": [],
+        "expenses": [],
+        "supporting_evidence": [],
+        "additional_information": "",
+        "certification": {
+            "certified_by": "Rosalind Pendleberry",
+            "certified_date": "2018-03-30T12:00:00.000Z"
+        }
+    },
+    {
+        "id": 103493,
+        "bill_type": "litigator_final",
+        "fee_scheme": "LGFS",
+        "fee_scheme_version": 10,
+        "status": "part_authorised",
+        "supplier_number": "9E444V",
+        "reference_number": "EP/HR/23473716",
+        "case_type": "cracked_trial",
+        "fee_type": "graduated",
+        "court": "central_criminal_court",
+        "case_number": "T20180110",
+        "totals": {
+            "claimed": {
+                "fees": 0.00,
+                "miscellaneous_fees": 0.00,
+                "expenses": 0.00,
+                "net_amount": 0.00,
+                "vat_amount": 0.00,
+                "gross_amount": 0.00
+            },
+            "assessed": {
+                "fees": 0.00,
+                "miscellaneous_fees": 0.00,
+                "expenses": 0.00,
+                "net_amount": 0.00,
+                "vat_amount": 0.00,
+                "gross_amount": 0.00
+            }
+        },
+        "dates": {
+            "submitted": "2018-03-28T09:30:00.000Z",
+            "assessed": "2018-04-03T09:56:00.000Z"
+        },
+        "messages": [
+            {
+                "message_id": 81355,
+                "timestamp": "2018-03-28T09:30:00.000Z",
+                "message": "Your claim has been submitted",
+                "user_id": 1,
+                "user_name": "System",
+                "type": "system"
+            },
+            {
+                "message_id": 87605,
+                "timestamp": "2018-03-29T10:51:00.000Z",
+                "message": "I forgot to attach filename\n\nAttachment: <a href='#noop'>DefendantName_T12345678-Indictment.pdf</a> (23.1 KB)",
+                "user_id": 3,
+                "user_name": "Rosalind Pendleberry",
+                "type": "provider"
+            },
+            {
+                "message_id": 92327,
+                "timestamp": "2018-03-30T10:53:00.000Z",
+                "message": "Your claim has been allocated",
+                "user_id": 1,
+                "user_name": "System",
+                "type": "system"
+            },
+            {
+                "message_id": 98961,
+                "timestamp": "2018-03-30T10:55:00.000Z",
+                "message": "Okay great. We'll use the file in our assessment of the claim",
+                "user_id": 2,
+                "user_name": "Caseworker",
+                "type": "caseworker"
+            },
+            {
+                "message_id": 121179,
+                "timestamp": "2018-04-03T09:54:00.000Z",
+                "message": "Assessment made\n\n<table><thead><tr><th>&nbsp;</th><th scope='col'>Amount</th></tr></thead><tbody><tr><td scope='row' class='bold'>Fees</td><td>£0.00</td></tr><tr><td scope='row' class='bold'>Miscellaneous fees</td><td>£0.00</td></tr><tr><td scope='row' class='bold'>Travel expenses</td><td>£0.00</td></tr><tr><td scope='row' class='bold'>Net amount</td><td>£0.00</td></tr><tr><td scope='row' class='bold'>VAT (20%)</td><td>£0.00</td></tr><tr><td scope='row' class='bold'>Gross amount</td><td>£0.00</td></tr></tbody></table>",
+                "user_id": 1,
+                "user_name": "System",
+                "type": "system"
+
+            },
+            {
+                "message_id": 121199,
+                "timestamp": "2018-04-03T09:56:00.000Z",
+                "message": "Your claim has been part-authorised",
+                "user_id": 1,
+                "user_name": "System",
+                "type": "system"
+            },
+            {
+                "message_id": 130335,
+                "timestamp": "2018-04-03T10:05:00.000Z",
+                "message": "Your claim was part-authorised because lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus non dolor sed condimentum. Proin molestie dolor sit amet finibus convallis. Curabitur ipsum diam, posuere id hendrerit non, rutrum et enim.",
+                "user_id": 2,
+                "user_name": "Caseworker",
+                "type": "caseworker"
+            }
+        ],
+        "defendants": [
+            {
+                "first_name": "Harlie",
+                "last_name": "Risen",
+                "date_of_birth": "1976-11-05T00:00:00.000Z",
+                "judicial_apportionment": "no",
+                "representation_orders": [
+                    {
+                        "representation_order_date": "2017-05-05T00:00:00.000Z",
+                        "maat_reference": 23473716
+                    }
+                ]
+            }
+        ],
+        "offence_details": {
+            "offence_class": "",
+            "offence_category": ""
+        },
+        "fees": [],
+        "miscellaneous_fees": [],
+        "disbursements": [],
+        "expenses": [],
+        "supporting_evidence": [],
+        "additional_information": "",
+        "certification": {
+            "certified_by": "Rosalind Pendleberry",
+            "certified_date": "2018-03-30T12:00:00.000Z"
+        }
+    },
+    {
+        "id": 112300,
+        "bill_type": "litigator_final",
+        "fee_scheme": "LGFS",
+        "fee_scheme_version": 10,
+        "status": "rejected",
+        "supplier_number": "5A000Z",
+        "reference_number": "DI/RR/96062451",
+        "case_type": "retrial",
+        "fee_type": "graduated",
+        "court": "snaresbrook",
+        "case_number": "T20180111",
+        "totals": {
+            "claimed": {
+                "fees": 0.00,
+                "miscellaneous_fees": 0.00,
+                "expenses": 0.00,
+                "net_amount": 0.00,
+                "vat_amount": 0.00,
+                "gross_amount": 0.00
+            },
+            "assessed": {
+                "fees": 0.00,
+                "miscellaneous_fees": 0.00,
+                "expenses": 0.00,
+                "net_amount": 0.00,
+                "vat_amount": 0.00,
+                "gross_amount": 0.00
+            }
+        },
+        "dates": {
+            "submitted": "2018-03-28T09:30:00.000Z",
+            "assessed": "2018-04-07T10:55:00.000Z"
+        },
+        "messages": [
+            {
+                "message_id": 15094,
+                "timestamp": "2018-03-28T09:30:00.000Z",
+                "message": "Your claim has been submitted",
+                "user_id": 1,
+                "user_name": "System",
+                "type": "system"
+            },
+            {
+                "message_id": 24755,
+                "timestamp": "2018-04-05T09:00:00.000Z",
+                "message": "Your claim has been allocated",
+                "user_id": 1,
+                "user_name": "System",
+                "type": "system"
+            },
+            {
+                "message_id": 28999,
+                "timestamp": "2018-04-05T10:53:00.000Z",
+                "message": "You have not attached an indictment to the claim. Please can you provide an indictment within the next 48 hours or I will have to reject the claim.",
+                "user_id": 2,
+                "user_name": "Caseworker 1",
+                "type": "caseworker"
+            },
+            {
+                "message_id": 32949,
+                "timestamp": "2018-04-07T10:55:00.000Z",
+                "message": "Your claim has been rejected",
+                "user_id": 1,
+                "user_name": "System",
+                "type": "system"
+            },
+            {
+                "message_id": 38398,
+                "timestamp": "2018-04-07T10:55:00.000Z",
+                "message": "Your claim has been rejected: No indictment attached<br><br>We rejected your claim because you didn't attach the indictment. Please submit the claim again with the indictment. You can download a copy from the Digital Case System.",
+                "user_id": 2,
+                "user_name": "Caseworker 1",
+                "type": "caseworker"
+            }
+        ],
+        "defendants": [
+            {
+                "first_name": "Ruthy",
+                "last_name": "Raecroft",
+                "date_of_birth": "1965-01-29T00:00:00.000Z",
+                "judicial_apportionment": "no",
+                "representation_orders": [
+                    {
+                        "representation_order_date": "2018-02-12T00:00:00.000Z",
+                        "maat_reference": 96062451
+                    }
+                ]
+            }
+        ],
+        "offence_details": {
+            "offence_class": "",
+            "offence_category": ""
+        },
+        "fees": [],
+        "miscellaneous_fees": [],
+        "disbursements": [],
+        "expenses": [],
+        "supporting_evidence": [],
+        "additional_information": "",
+        "certification": {
+            "certified_by": "Rosalind Pendleberry",
+            "certified_date": "2018-03-30T12:00:00.000Z"
+        }
+    },
+    {
+        "id": 117155,
+        "bill_type": "litigator_final",
+        "fee_scheme": "LGFS",
+        "fee_scheme_version": 10,
+        "status": "rejected",
+        "supplier_number": "6B111Y",
+        "reference_number": "CH/FF/27545971",
+        "case_type": "guilty_plea",
+        "fee_type": "graduated",
+        "court": "inner_london",
+        "case_number": "T20180112",
+        "totals": {
+            "claimed": {
+                "fees": 0.00,
+                "miscellaneous_fees": 0.00,
+                "expenses": 0.00,
+                "net_amount": 0.00,
+                "vat_amount": 0.00,
+                "gross_amount": 0.00
+            },
+            "assessed": {
+                "fees": 0.00,
+                "miscellaneous_fees": 0.00,
+                "expenses": 0.00,
+                "net_amount": 0.00,
+                "vat_amount": 0.00,
+                "gross_amount": 0.00
+            }
+        },
+        "dates": {
+            "submitted": "2018-03-28T10:50:00.000Z",
+            "assessed": "2018-04-07T10:55:00.000Z"
+        },
+        "messages": [
+            {
+                "message_id": 74083,
+                "timestamp": "2018-03-28T10:50:00.000Z",
+                "message": "Your claim has been submitted",
+                "user_id": 1,
+                "user_name": "System",
+                "type": "system"
+            },
+            {
+                "message_id": 76641,
+                "timestamp": "2018-04-05T09:00:00.000Z",
+                "message": "Your claim has been allocated",
+                "user_id": 1,
+                "user_name": "System",
+                "type": "system"
+            },
+            {
+                "message_id": 78365,
+                "timestamp": "2018-04-05T10:53:00.000Z",
+                "message": "You have not attached a representation order to the claim. Please can you provide a representation order within the next 48 hours or I will have to reject the claim.",
+                "user_id": 2,
+                "user_name": "Caseworker 1",
+                "type": "caseworker"
+            },
+            {
+                "message_id": 85296,
+                "timestamp": "2018-04-07T10:55:00.000Z",
+                "message": "Your claim has been rejected",
+                "user_id": 1,
+                "user_name": "System",
+                "type": "system"
+            },
+            {
+                "message_id": 89826,
+                "timestamp": "2018-04-07T10:55:00.000Z",
+                "message": "Your claim has been rejected: No representation order<br><br>We rejected your claim because you didn’t attach the representation order. Please submit the claim again with the representation order. You can get a copy from the Magistrates' Court where it was issued.",
+                "user_id": 2,
+                "user_name": "Caseworker 1",
+                "type": "caseworker"
+            }
+        ],
+        "defendants": [
+            {
+                "first_name": "Farra",
+                "last_name": "Feighry",
+                "date_of_birth": "1967-05-05T00:00:00.000Z",
+                "judicial_apportionment": "yes",
+                "representation_orders": [
+                    {
+                        "representation_order_date": "2017-05-28T00:00:00.000Z",
+                        "maat_reference": 27545971
+                    }
+                ]
+            }
+        ],
+        "offence_details": {
+            "offence_class": "",
+            "offence_category": ""
+        },
+        "fees": [],
+        "miscellaneous_fees": [],
+        "disbursements": [],
+        "expenses": [],
+        "supporting_evidence": [],
+        "additional_information": "",
+        "certification": {
+            "certified_by": "Rosalind Pendleberry",
+            "certified_date": "2018-03-30T12:00:00.000Z"
+        }
+    },
+    {
+        "id": 125650,
+        "bill_type": "litigator_final",
+        "fee_scheme": "LGFS",
+        "fee_scheme_version": 10,
+        "status": "refused",
+        "supplier_number": "7C222X",
+        "reference_number": "AH/DG/78766352",
+        "case_type": "trial",
+        "fee_type": "graduated",
+        "court": "central_criminal_court",
+        "case_number": "T20180113",
+        "totals": {
+            "claimed": {
+                "fees": 0.00,
+                "miscellaneous_fees": 0.00,
+                "expenses": 0.00,
+                "net_amount": 0.00,
+                "vat_amount": 0.00,
+                "gross_amount": 0.00
+            },
+            "assessed": {
+                "fees": 0.00,
+                "miscellaneous_fees": 0.00,
+                "expenses": 0.00,
+                "net_amount": 0.00,
+                "vat_amount": 0.00,
+                "gross_amount": 0.00
+            }
+        },
+        "dates": {
+            "submitted": "2018-03-29T10:50:00.000Z",
+            "assessed": "2018-04-05T10:53:00.000Z"
+        },
+        "messages": [
+            {
+                "message_id": 72162,
+                "timestamp": "2018-03-29T10:50:00.000Z",
+                "message": "Your claim has been submitted",
+                "user_id": 1,
+                "user_name": "System",
+                "type": "system"
+            },
+            {
+                "message_id": 79657,
+                "timestamp": "2018-04-05T09:00:00.000Z",
+                "message": "Your claim has been allocated",
+                "user_id": 1,
+                "user_name": "System",
+                "type": "system"
+            },
+            {
+                "message_id": 87665,
+                "timestamp": "2018-04-05T10:53:00.000Z",
+                "message": "Your claim has been refused",
+                "user_id": 1,
+                "user_name": "System",
+                "type": "system"
+            },
+            {
+                "message_id": 91024,
+                "timestamp": "2018-04-05T10:54:00.000Z",
+                "message": "Your claim has been refused: <ul><li>Wrong instructed advocate</li></ul>",
+                "user_id": 1,
+                "user_name": "Caseworker 2",
+                "type": "caseworker"
+            }
+        ],
+        "defendants": [
+            {
+                "first_name": "Dotty",
+                "last_name": "Gatehouse",
+                "date_of_birth": "1967-10-22T00:00:00.000Z",
+                "judicial_apportionment": "no",
+                "representation_orders": [
+                    {
+                        "representation_order_date": "2017-11-23T00:00:00.000Z",
+                        "maat_reference": 78766352
+                    }
+                ]
+            }
+        ],
+        "offence_details": {
+            "offence_class": "",
+            "offence_category": ""
+        },
+        "fees": [],
+        "miscellaneous_fees": [],
+        "disbursements": [],
+        "expenses": [],
+        "supporting_evidence": [],
+        "additional_information": "",
+        "certification": {
+            "certified_by": "Rosalind Pendleberry",
+            "certified_date": "2018-03-30T12:00:00.000Z"
+        }
+    },
+    {
+        "id": 134207,
+        "bill_type": "litigator_final",
+        "fee_scheme": "LGFS",
+        "fee_scheme_version": 10,
+        "status": "refused",
+        "supplier_number": "8D333W",
+        "reference_number": "HT/MS/61831396",
+        "case_type": "retrial",
+        "fee_type": "graduated",
+        "court": "snaresbrook",
+        "case_number": "T20180114",
+        "totals": {
+            "claimed": {
+                "fees": 0.00,
+                "miscellaneous_fees": 0.00,
+                "expenses": 0.00,
+                "net_amount": 0.00,
+                "vat_amount": 0.00,
+                "gross_amount": 0.00
+            },
+            "assessed": {
+                "fees": 0.00,
+                "miscellaneous_fees": 0.00,
+                "expenses": 0.00,
+                "net_amount": 0.00,
+                "vat_amount": 0.00,
+                "gross_amount": 0.00
+            }
+        },
+        "dates": {
+            "submitted": "2018-03-29T09:30:00.000Z",
+            "assessed": "2018-04-05T10:54:00.000Z"
+        },
+        "messages": [
+            {
+                "message_id": 72162,
+                "timestamp": "2018-03-29T10:50:00.000Z",
+                "message": "Your claim has been submitted",
+                "user_id": 1,
+                "user_name": "System",
+                "type": "system"
+            },
+            {
+                "message_id": 79657,
+                "timestamp": "2018-04-05T09:00:00.000Z",
+                "message": "Your claim has been allocated",
+                "user_id": 1,
+                "user_name": "System",
+                "type": "system"
+            },
+            {
+                "message_id": 87665,
+                "timestamp": "2018-04-05T10:54:00.000Z",
+                "message": "Your claim has been refused",
+                "user_id": 1,
+                "user_name": "System",
+                "type": "system"
+            },
+            {
+                "message_id": 91024,
+                "timestamp": "2018-04-05T10:54:00.000Z",
+                "message": "Your claim has been refused: <ul><li>Other: This is a duplicate claim</li></ul>",
+                "user_id": 1,
+                "user_name": "Caseworker 2",
+                "type": "caseworker"
+            },
+            {
+                "message_id": 91024,
+                "timestamp": "2018-04-05T10:57:00.000Z",
+                "message": "I refused your claim because it was a duplicate of an earlier claim you submitted for the same court, case number and defendant.",
+                "user_id": 1,
+                "user_name": "Caseworker 2",
+                "type": "caseworker"
+            }
+        ],
+        "defendants": [
+            {
+                "first_name": "Michele",
+                "last_name": "Studd",
+                "date_of_birth": "1994-09-16T00:00:00.000Z",
+                "judicial_apportionment": "yes",
+                "representation_orders": [
+                    {
+                        "representation_order_date": "2017-08-11T00:00:00.000Z",
+                        "maat_reference": 61831396
+                    }
+                ]
+            }
+        ],
+        "offence_details": {
+            "offence_class": "",
+            "offence_category": ""
+        },
+        "fees": [],
+        "miscellaneous_fees": [],
+        "disbursements": [],
+        "expenses": [],
+        "supporting_evidence": [],
+        "additional_information": "",
+        "certification": {
+            "certified_by": "Rosalind Pendleberry",
+            "certified_date": "2018-03-30T12:00:00.000Z"
+        }
+    },
+    {
+        "id": 138362,
+        "bill_type": "litigator_final",
+        "fee_scheme": "LGFS",
+        "fee_scheme_version": 10,
+        "status": "redetermination",
+        "supplier_number": "9E444V",
+        "reference_number": "MB/JW/23467250",
+        "case_type": "guilty_plea",
+        "fee_type": "graduated",
+        "court": "inner_london",
+        "case_number": "T20180115",
+        "totals": {
+            "claimed": {
+                "fees": 0.00,
+                "miscellaneous_fees": 0.00,
+                "expenses": 0.00,
+                "net_amount": 0.00,
+                "vat_amount": 0.00,
+                "gross_amount": 0.00
+            },
+            "assessed": {
+                "fees": 0.00,
+                "miscellaneous_fees": 0.00,
+                "expenses": 0.00,
+                "net_amount": 0.00,
+                "vat_amount": 0.00,
+                "gross_amount": 0.00
+            }
+        },
+        "dates": {
+            "submitted": "2018-03-29T09:30:00.000Z",
+            "assessed": ""
+        },
+        "messages": [],
+        "defendants": [
+            {
+                "first_name": "Joanna",
+                "last_name": "Whitewood",
+                "date_of_birth": "1985-08-20T00:00:00.000Z",
+                "judicial_apportionment": "yes",
+                "representation_orders": [
+                    {
+                        "representation_order_date": "2018-01-08T00:00:00.000Z",
+                        "maat_reference": 23467250
+                    }
+                ]
+            }
+        ],
+        "offence_details": {
+            "offence_class": "",
+            "offence_category": ""
+        },
+        "fees": [],
+        "miscellaneous_fees": [],
+        "disbursements": [],
+        "expenses": [],
+        "supporting_evidence": [],
+        "additional_information": "",
+        "certification": {
+            "certified_by": "Rosalind Pendleberry",
+            "certified_date": "2018-03-30T12:00:00.000Z"
+        }
+    },
+    {
+        "id": 145940,
+        "bill_type": "litigator_final",
+        "fee_scheme": "LGFS",
+        "fee_scheme_version": 10,
+        "status": "redetermination",
+        "supplier_number": "5A000Z",
+        "reference_number": "HR/MK/64269597",
+        "case_type": "trial",
+        "fee_type": "graduated",
+        "court": "central_criminal_court",
+        "case_number": "T20180116",
+        "totals": {
+            "claimed": {
+                "fees": 0.00,
+                "miscellaneous_fees": 0.00,
+                "expenses": 0.00,
+                "net_amount": 0.00,
+                "vat_amount": 0.00,
+                "gross_amount": 0.00
+            },
+            "assessed": {
+                "fees": 0.00,
+                "miscellaneous_fees": 0.00,
+                "expenses": 0.00,
+                "net_amount": 0.00,
+                "vat_amount": 0.00,
+                "gross_amount": 0.00
+            }
+        },
+        "dates": {
+            "submitted": "2018-03-29T09:30:00.000Z",
+            "assessed": ""
+        },
+        "messages": [],
+        "defendants": [
+            {
+                "first_name": "Maggie",
+                "last_name": "Kubica",
+                "date_of_birth": "1968-08-27T00:00:00.000Z",
+                "judicial_apportionment": "no",
+                "representation_orders": [
+                    {
+                        "representation_order_date": "2017-08-24T00:00:00.000Z",
+                        "maat_reference": 64269597
+                    }
+                ]
+            }
+        ],
+        "offence_details": {
+            "offence_class": "",
+            "offence_category": ""
+        },
+        "fees": [],
+        "miscellaneous_fees": [],
+        "disbursements": [],
+        "expenses": [],
+        "supporting_evidence": [],
+        "additional_information": "",
+        "certification": {
+            "certified_by": "Rosalind Pendleberry",
+            "certified_date": "2018-03-30T12:00:00.000Z"
+        }
+    },
+    {
+        "id": 153675,
+        "bill_type": "litigator_final",
+        "fee_scheme": "LGFS",
+        "fee_scheme_version": 10,
+        "status": "awaiting_written_reasons",
+        "supplier_number": "6B111Y",
+        "reference_number": "HW/CB/62650859",
+        "case_type": "retrial",
+        "fee_type": "graduated",
+        "court": "snaresbrook",
+        "case_number": "T20180117",
+        "totals": {
+            "claimed": {
+                "fees": 0.00,
+                "miscellaneous_fees": 0.00,
+                "expenses": 0.00,
+                "net_amount": 0.00,
+                "vat_amount": 0.00,
+                "gross_amount": 0.00
+            },
+            "assessed": {
+                "fees": 0.00,
+                "miscellaneous_fees": 0.00,
+                "expenses": 0.00,
+                "net_amount": 0.00,
+                "vat_amount": 0.00,
+                "gross_amount": 0.00
+            }
+        },
+        "dates": {
+            "submitted": "2018-03-29T09:30:00.000Z",
+            "assessed": ""
+        },
+        "messages": [],
+        "defendants": [
+            {
+                "first_name": "Carolyn",
+                "last_name": "Bernadzki",
+                "date_of_birth": "1995-03-09T00:00:00.000Z",
+                "judicial_apportionment": "yes",
+                "representation_orders": [
+                    {
+                        "representation_order_date": "2017-08-17T00:00:00.000Z",
+                        "maat_reference": 62650859
+                    }
+                ]
+            }
+        ],
+        "offence_details": {
+            "offence_class": "",
+            "offence_category": ""
+        },
+        "fees": [],
+        "miscellaneous_fees": [],
+        "disbursements": [],
+        "expenses": [],
+        "supporting_evidence": [],
+        "additional_information": "",
+        "certification": {
+            "certified_by": "Rosalind Pendleberry",
+            "certified_date": "2018-03-30T12:00:00.000Z"
+        }
+    },
+    {
+        "id": 163516,
+        "bill_type": "litigator_final",
+        "fee_scheme": "LGFS",
+        "fee_scheme_version": 10,
+        "status": "awaiting_written_reasons",
+        "supplier_number": "7C222X",
+        "reference_number": "GF/AB/69038851",
+        "case_type": "guilty_plea",
+        "fee_type": "graduated",
+        "court": "inner_london",
+        "case_number": "T20180118",
+        "totals": {
+            "claimed": {
+                "fees": 0.00,
+                "miscellaneous_fees": 0.00,
+                "expenses": 0.00,
+                "net_amount": 0.00,
+                "vat_amount": 0.00,
+                "gross_amount": 0.00
+            },
+            "assessed": {
+                "fees": 0.00,
+                "miscellaneous_fees": 0.00,
+                "expenses": 0.00,
+                "net_amount": 0.00,
+                "vat_amount": 0.00,
+                "gross_amount": 0.00
+            }
+        },
+        "dates": {
+            "submitted": "2018-03-29T09:30:00.000Z",
+            "assessed": ""
+        },
+        "messages": [],
+        "defendants": [
+            {
+                "first_name": "Aldin",
+                "last_name": "Blackaller",
+                "date_of_birth": "1994-05-10T00:00:00.000Z",
+                "judicial_apportionment": "no",
+                "representation_orders": [
+                    {
+                        "representation_order_date": "2017-03-18T00:00:00.000Z",
+                        "maat_reference": 69038851
+                    }
+                ]
+            }
+        ],
+        "offence_details": {
+            "offence_class": "",
+            "offence_category": ""
+        },
+        "fees": [],
+        "miscellaneous_fees": [],
+        "disbursements": [],
+        "expenses": [],
+        "supporting_evidence": [],
+        "additional_information": "",
+        "certification": {
+            "certified_by": "Rosalind Pendleberry",
+            "certified_date": "2018-03-30T12:00:00.000Z"
+        }
+    }
+]
