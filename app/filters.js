@@ -1,3 +1,8 @@
+// https://www.npmjs.com/package/nunjucks-numeral-filter
+const numeralFilter = require('nunjucks-numeral-filter');
+// https://www.npmjs.com/package/nunjucks-date-filter
+const moment = require('moment');
+
 module.exports = function (env) {
   /**
    * Instantiate object used to store the methods registered as a
@@ -5,7 +10,18 @@ module.exports = function (env) {
    * gov.uk core filters by creating filter methods of the same name.
    * @type {Object}
    */
-  var filters = {}
+  let filters = {}
+
+  filters.numeral = numeralFilter;
+
+  /* ------------------------------------------------------------------
+    date filter for use in Nunjucks
+    example: {{ params.date | date("DD/MM/YYYY") }}
+    outputs: 01/01/1970
+  ------------------------------------------------------------------ */
+  filters.date = function(timestamp, format) {
+    return moment(timestamp).format(format);
+  }
 
   /* ------------------------------------------------------------------
     add your methods to the filters obj below this comment block:
