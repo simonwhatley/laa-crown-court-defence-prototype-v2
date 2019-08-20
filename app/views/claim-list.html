@@ -28,9 +28,9 @@ new MOJFrontend.SortableTable({
 }) }}
 {% endblock %}
 
-{%- set rowData %}
+{%- set rowData -%}
 [
-  {%- for claim in claims %}
+  {%- for claim in claims -%}
   [
     {
       html: '<a class="govuk-link" href="#noop">{{claim.case_number}}</a><br><span class="govuk-!-font-size-16">{{claim.reference_number}}</span>',
@@ -62,9 +62,9 @@ new MOJFrontend.SortableTable({
       html: '{% if claim.messages.length -%}<a href="./{{claim.id}}/details">View {{claim.messages.length}} message{% if claim.messages.length > 1 -%}s{%- endif %}</a>{% else %}No messages{%- endif %}'
     }
   ]{%- if loop.index < claims.length %},{% endif -%}
-  {% endfor -%}
+  {%- endfor -%}
 ]
-{% endset -%}
+{%- endset -%}
 
 {% block content %}
 <!-- {{rowData}} -->
