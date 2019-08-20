@@ -6,6 +6,16 @@ router.get('/', (req, res) => {
   res.render('index');
 });
 
+router.get('/claim-list', (req, res) => {
+
+  let data = require('./views/data/claims_advocates.json');
+
+  // console.log(data);
+
+  res.render('claim-list', {
+    claims: data
+  });
+});
 
 router.get('/claim-summary', (req, res) => {
   res.render('claim-summary');

@@ -1,0 +1,156 @@
+
+{% extends "layout.html" %}
+
+{%- from "moj-badge/macro.njk" import mojBadge %}
+
+{% block pageTitle %}
+  Claim list – {{ serviceName }}
+{% endblock %}
+
+{% block pageScripts %}
+<script>
+new MOJFrontend.SortableTable({
+  table: document.getElementById('claims-list')
+});
+</script>
+{% endblock %}
+
+{% block pageStyles %}
+
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "prototype"
+  },
+  html: 'This is a prototype service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+{% endblock %}
+
+{%- set rowData %}
+[
+  {%- for claim in claims %}
+  [
+    {
+      html: '<a class="govuk-link" href="#noop">{{claim.case_number}}</a><br><span class="govuk-!-font-size-16">{{claim.reference_number}}</span>',
+      attributes: {
+        "data-sort-value": "{{claim.case_number}}"
+      }
+    },
+    {
+      html: '<ul class="govuk-list">{%- for defendant in claim.defendants %}<li>{{ defendant.first_name }} {{ defendant.last_name }}</li>{% endfor -%}</ul>'
+    },
+    {
+      html: "&pound;{{ claim.totals.claimed.gross_amount | numeral('0,0.00') }}",
+      format: "numeric"
+    },
+    {
+      html: "{% if claim.status in ['draft','submitted','allocated'] -%}&ndash;{% else %}&pound;{{ claim.totals.assessed.gross_amount | numeral('0,0.00') }}{%- endif %}",
+      format: "numeric"
+    },
+    {
+      text: '{{claim.status | replace("_"," ") | capitalize }}'
+    },
+    {
+      html: '{% if claim.status == 'draft' -%}&ndash;{% else %}{{ claim.dates.submitted | date('DD/MM/YYYY') }}{%- endif %}',
+      attributes: {
+        "data-sort-value": "{{ claim.dates.submitted | date('YYYYDDMM') }}"
+      }
+    },
+    {
+      html: '{% if claim.messages.length -%}<a href="./{{claim.id}}/details">View {{claim.messages.length}} message{% if claim.messages.length > 1 -%}s{%- endif %}</a>{% else %}No messages{%- endif %}'
+    }
+  ]{%- if loop.index < claims.length %},{% endif -%}
+  {% endfor -%}
+]
+{% endset -%}
+
+{% block content %}
+<!-- {{rowData}} -->
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-xl">
+        Your claims
+      </h1>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+
+        </div>
+        <div class="govuk-grid-column-one-third">
+
+        </div>
+        <div class="govuk-grid-column-one-third">
+
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+
+          <h1 class="govuk-heading-l">
+            Claims list
+          </h1>
+
+          {{ govukTable({
+            attributes: {
+              id: "claims-list"
+            },
+            head: [
+              {
+                text: "Case number",
+                attributes: {
+                  "aria-sort": "ascending"
+                }
+              },
+              {
+                text: "Defendants",
+                attributes: {
+                  "aria-sort": "none"
+                }
+              },
+              {
+                text: "Claimed",
+                format: "numeric",
+                attributes: {
+                  "aria-sort": "none"
+                }
+              },
+              {
+                text: "Assessed",
+                format: "numeric",
+                attributes: {
+                  "aria-sort": "none"
+                }
+              },
+              {
+                text: "Status",
+                attributes: {
+                  "aria-sort": "none"
+                }
+              },
+              {
+                text: "Date submitted",
+                attributes: {
+                  "aria-sort": "none"
+                }
+              },
+              {
+                text: "Messages",
+                attributes: {
+                  "aria-sort": "none"
+                }
+              }
+            ],
+            rows: [[ { html: '<a class="govuk-link" href="#noop">T20180101</a><br><span class="govuk-!-font-size-16">HR/PS/72852849</span>', attributes: { "data-sort-value": "T20180101" } }, { html: '<ul class="govuk-list"><li>Philippine Struttman</li></ul>' }, { html: "&pound;0.00", format: "numeric" }, { html: "&ndash;", format: "numeric" }, { text: 'Draft' }, { html: '&ndash;', attributes: { "data-sort-value": "Invalid date" } }, { html: 'No messages' } ], [ { html: '<a class="govuk-link" href="#noop">A20180102</a><br><span class="govuk-!-font-size-16">HW/KY/44332721</span>', attributes: { "data-sort-value": "A20180102" } }, { html: '<ul class="govuk-list"><li>Katina Yerrall</li></ul>' }, { html: "&pound;0.00", format: "numeric" }, { html: "&ndash;", format: "numeric" }, { text: 'Draft' }, { html: '&ndash;', attributes: { "data-sort-value": "Invalid date" } }, { html: 'No messages' } ], [ { html: '<a class="govuk-link" href="#noop">T20180103</a><br><span class="govuk-!-font-size-16">GF/LT/75674990</span>', attributes: { "data-sort-value": "T20180103" } }, { html: '<ul class="govuk-list"><li>Louisa Toop</li></ul>' }, { html: "&pound;0.00", format: "numeric" }, { html: "&ndash;", format: "numeric" }, { text: 'Submitted' }, { html: '28/03/2018', attributes: { "data-sort-value": "20182803" } }, { html: '<a href="./73160/details">View 1 message</a>' } ], [ { html: '<a class="govuk-link" href="#noop">A20180104</a><br><span class="govuk-!-font-size-16">SB/AN/42935618</span>', attributes: { "data-sort-value": "A20180104" } }, { html: '<ul class="govuk-list"><li>Ardelia Nappin</li></ul>' }, { html: "&pound;120.00", format: "numeric" }, { html: "&ndash;", format: "numeric" }, { text: 'Submitted' }, { html: '28/03/2018', attributes: { "data-sort-value": "20182803" } }, { html: '<a href="./77501/details">View 1 message</a>' } ], [ { html: '<a class="govuk-link" href="#noop">T20180105</a><br><span class="govuk-!-font-size-16">PT/LF/27627162</span>', attributes: { "data-sort-value": "T20180105" } }, { html: '<ul class="govuk-list"><li>Lyman Firle</li></ul>' }, { html: "&pound;0.00", format: "numeric" }, { html: "&ndash;", format: "numeric" }, { text: 'Allocated' }, { html: '29/03/2018', attributes: { "data-sort-value": "20182903" } }, { html: '<a href="./84915/details">View 2 messages</a>' } ], [ { html: '<a class="govuk-link" href="#noop">T20180106</a><br><span class="govuk-!-font-size-16">CEB/SJ/66637216</span>', attributes: { "data-sort-value": "T20180106" } }, { html: '<ul class="govuk-list"><li>Sheryl Jackling</li></ul>' }, { html: "&pound;0.00", format: "numeric" }, { html: "&ndash;", format: "numeric" }, { text: 'Allocated' }, { html: '29/03/2018', attributes: { "data-sort-value": "20182903" } }, { html: '<a href="./91001/details">View 4 messages</a>' } ], [ { html: '<a class="govuk-link" href="#noop">T20180107</a><br><span class="govuk-!-font-size-16">GF/KM/65063864</span>', attributes: { "data-sort-value": "T20180107" } }, { html: '<ul class="govuk-list"><li>Kelsey McTerlagh</li></ul>' }, { html: "&pound;0.00", format: "numeric" }, { html: "&pound;0.00", format: "numeric" }, { text: 'Authorised' }, { html: '29/03/2018', attributes: { "data-sort-value": "20182903" } }, { html: '<a href="./93069/details">View 4 messages</a>' } ], [ { html: '<a class="govuk-link" href="#noop">T20180108</a><br><span class="govuk-!-font-size-16">PH/AT/67772268</span>', attributes: { "data-sort-value": "T20180108" } }, { html: '<ul class="govuk-list"><li>Alexis Thorbon</li></ul>' }, { html: "&pound;0.00", format: "numeric" }, { html: "&pound;0.00", format: "numeric" }, { text: 'Authorised' }, { html: '29/03/2018', attributes: { "data-sort-value": "20182903" } }, { html: '<a href="./97631/details">View 10 messages</a>' } ], [ { html: '<a class="govuk-link" href="#noop">T20180109</a><br><span class="govuk-!-font-size-16">FA/TL/69142753</span>', attributes: { "data-sort-value": "T20180109" } }, { html: '<ul class="govuk-list"><li>Tabby Lynds</li></ul>' }, { html: "&pound;0.00", format: "numeric" }, { html: "&pound;0.00", format: "numeric" }, { text: 'Part authorised' }, { html: '29/03/2018', attributes: { "data-sort-value": "20182903" } }, { html: '<a href="./99362/details">View 4 messages</a>' } ], [ { html: '<a class="govuk-link" href="#noop">T20180110</a><br><span class="govuk-!-font-size-16">EP/HR/23473716</span>', attributes: { "data-sort-value": "T20180110" } }, { html: '<ul class="govuk-list"><li>Harlie Risen</li><li>Katina Yerrall</li></ul>' }, { html: "&pound;0.00", format: "numeric" }, { html: "&pound;0.00", format: "numeric" }, { text: 'Part authorised' }, { html: '28/03/2018', attributes: { "data-sort-value": "20182803" } }, { html: '<a href="./103493/details">View 7 messages</a>' } ], [ { html: '<a class="govuk-link" href="#noop">T20180111</a><br><span class="govuk-!-font-size-16">DI/RR/96062451</span>', attributes: { "data-sort-value": "T20180111" } }, { html: '<ul class="govuk-list"><li>Ruthy Raecroft</li></ul>' }, { html: "&pound;0.00", format: "numeric" }, { html: "&pound;0.00", format: "numeric" }, { text: 'Rejected' }, { html: '28/03/2018', attributes: { "data-sort-value": "20182803" } }, { html: '<a href="./112300/details">View 5 messages</a>' } ], [ { html: '<a class="govuk-link" href="#noop">T20180112</a><br><span class="govuk-!-font-size-16">CH/FF/27545971</span>', attributes: { "data-sort-value": "T20180112" } }, { html: '<ul class="govuk-list"><li>Farra Feighry</li></ul>' }, { html: "&pound;0.00", format: "numeric" }, { html: "&pound;0.00", format: "numeric" }, { text: 'Rejected' }, { html: '28/03/2018', attributes: { "data-sort-value": "20182803" } }, { html: '<a href="./117155/details">View 5 messages</a>' } ], [ { html: '<a class="govuk-link" href="#noop">T20180113</a><br><span class="govuk-!-font-size-16">AH/DG/78766352</span>', attributes: { "data-sort-value": "T20180113" } }, { html: '<ul class="govuk-list"><li>Dotty Gatehouse</li></ul>' }, { html: "&pound;0.00", format: "numeric" }, { html: "&pound;0.00", format: "numeric" }, { text: 'Refused' }, { html: '29/03/2018', attributes: { "data-sort-value": "20182903" } }, { html: '<a href="./125650/details">View 4 messages</a>' } ], [ { html: '<a class="govuk-link" href="#noop">T20180114</a><br><span class="govuk-!-font-size-16">HT/MS/61831396</span>', attributes: { "data-sort-value": "T20180114" } }, { html: '<ul class="govuk-list"><li>Michele Studd</li></ul>' }, { html: "&pound;0.00", format: "numeric" }, { html: "&pound;0.00", format: "numeric" }, { text: 'Refused' }, { html: '29/03/2018', attributes: { "data-sort-value": "20182903" } }, { html: '<a href="./134207/details">View 5 messages</a>' } ], [ { html: '<a class="govuk-link" href="#noop">T20180115</a><br><span class="govuk-!-font-size-16">MB/JW/23467250</span>', attributes: { "data-sort-value": "T20180115" } }, { html: '<ul class="govuk-list"><li>Joanna Whitewood</li></ul>' }, { html: "&pound;0.00", format: "numeric" }, { html: "&pound;0.00", format: "numeric" }, { text: 'Redetermination' }, { html: '29/03/2018', attributes: { "data-sort-value": "20182903" } }, { html: 'No messages' } ], [ { html: '<a class="govuk-link" href="#noop">T20180116</a><br><span class="govuk-!-font-size-16">HR/MK/64269597</span>', attributes: { "data-sort-value": "T20180116" } }, { html: '<ul class="govuk-list"><li>Maggie Kubica</li></ul>' }, { html: "&pound;0.00", format: "numeric" }, { html: "&pound;0.00", format: "numeric" }, { text: 'Redetermination' }, { html: '29/03/2018', attributes: { "data-sort-value": "20182903" } }, { html: 'No messages' } ], [ { html: '<a class="govuk-link" href="#noop">T20180117</a><br><span class="govuk-!-font-size-16">HW/CB/62650859</span>', attributes: { "data-sort-value": "T20180117" } }, { html: '<ul class="govuk-list"><li>Carolyn Bernadzki</li></ul>' }, { html: "&pound;0.00", format: "numeric" }, { html: "&pound;0.00", format: "numeric" }, { text: 'Awaiting written reasons' }, { html: '29/03/2018', attributes: { "data-sort-value": "20182903" } }, { html: 'No messages' } ], [ { html: '<a class="govuk-link" href="#noop">T20180118</a><br><span class="govuk-!-font-size-16">GF/AB/69038851</span>', attributes: { "data-sort-value": "T20180118" } }, { html: '<ul class="govuk-list"><li>Aldin Blackaller</li></ul>' }, { html: "&pound;0.00", format: "numeric" }, { html: "&pound;0.00", format: "numeric" }, { text: 'Awaiting written reasons' }, { html: '29/03/2018', attributes: { "data-sort-value": "20182903" } }, { html: 'No messages' } ]]
+            }) }}
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}
