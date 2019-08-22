@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
 
 router.get('/claim-list', (req, res) => {
 
-  let data = require('./views/data/claims_advocates.json');
+  let data = require('./views/data/claims_litigators.json');
 
   // console.log(data);
 

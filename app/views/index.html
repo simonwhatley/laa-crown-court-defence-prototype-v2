@@ -22,35 +22,142 @@
         {{ serviceName }}
       </h1>
 
-      <h2 class="govuk-heading-l">Claim list</h2>
+      <h2 class="govuk-heading-l">Claim lists</h2>
 
       <h3 class="govuk-heading-m">Advocates and litigators</h3>
 
-      <ul class="govuk-list">
-        <li>
-          <a class="govuk-link" href="./claim-list">My claims</a>
-        </li>
-        <li>
-          <a class="govuk-link" href="#">Authorised claims</a>
-        </li>
-        <li>
-          <a class="govuk-link" href="#">Outstanding claims</a>
-        </li>
-      </ul>
+      {{ govukTable({
+        head: [
+          {
+            text: "Provider type"
+          },
+          {
+            text: "Section"
+          },
+          {
+            text: "Example"
+          }
+        ],
+        rows: [
+          [
+            {
+              text: "Advocate"
+            },
+            {
+              text: "My claims"
+            },
+            {
+              html: '<a href="./claim-list?user_type=provider&provider_type=advocate">View</a>'
+            }
+          ],
+          [
+            {
+              text: "Advocate"
+            },
+            {
+              text: "Outstanding claims"
+            },
+            {
+              html: '<a href="./outstanding-claims?user_type=provider&provider_type=advocate">View</a>'
+            }
+          ],
+          [
+            {
+              text: "Advocate"
+            },
+            {
+              text: "Authorised claims"
+            },
+            {
+              html: '<a href="./authorised-claims?user_type=provider&provider_type=advocate">View</a>'
+            }
+          ],
+          [
+            {
+              text: "Litigator"
+            },
+            {
+              text: "My claims"
+            },
+            {
+              html: '<a href="./claim-list?user_type=provider&provider_type=litigator">View</a>'
+            }
+          ],
+          [
+            {
+              text: "Litigator"
+            },
+            {
+              text: "Outstanding claims"
+            },
+            {
+              html: '<a href="./outstanding-claims?user_type=provider&provider_type=litigator">View</a>'
+            }
+          ],
+          [
+            {
+              text: "Litigator"
+            },
+            {
+              text: "Authorised claims"
+            },
+            {
+              html: '<a href="./authorised-claims?user_type=provider&provider_type=litigator">View</a>'
+            }
+          ]
+        ]
+      }) }}
 
       <h3 class="govuk-heading-m">Caseworkers</h3>
 
-      <ul class="govuk-list">
-        <li>
-          <a class="govuk-link" href="#">My claims</a>
-        </li>
-        <li>
-          <a class="govuk-link" href="#">Allocation queue</a>
-        </li>
-        <li>
-          <a class="govuk-link" href="#">Re-allocation queue</a>
-        </li>
-      </ul>
+      {{ govukTable({
+        head: [
+          {
+            text: "User type"
+          },
+          {
+            text: "Section"
+          },
+          {
+            text: "Example"
+          }
+        ],
+        rows: [
+          [
+            {
+              text: "Caseworker"
+            },
+            {
+              text: "My claims"
+            },
+            {
+              html: '<a href="./claim-list?user_type=caseworker">View</a>'
+            }
+          ],
+          [
+            {
+              text: "Senior caseworker"
+            },
+            {
+              text: "Allocation queue"
+            },
+            {
+              html: '<a href="./allocation-queue?user_type=caseworker_admin">View</a>'
+            }
+          ],
+          [
+            {
+              text: "Senior caseworker"
+            },
+            {
+              text: "Re-allocation queue"
+            },
+            {
+              html: '<a href="./reallocation-queue?user_type=caseworker_admin">View</a>'
+            }
+          ]
+        ]
+      }) }}
 
       <h2 class="govuk-heading-l">Claim summary</h2>
 
